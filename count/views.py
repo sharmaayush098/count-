@@ -1,5 +1,7 @@
 import json
 
+from django.contrib.auth.models import User
+from django.db.models.functions import datetime
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
@@ -56,6 +58,28 @@ def count_decrease(request, count_id=None):
         return HttpResponse(
                 content_type='application/json', content=json.dumps({"count": count_value})
             )
+
+
+@csrf_exempt
+def detail(request, user_id=None):
+    if request.method == "GET":
+        user = User.objects.get(id=int(user_id))
+        time = datetime.datetime.now()
+        return render(request, "increment_page.html", {"user": user, "time": time})
+    elif request.method == "POST":
+        user = User.objects.get(id=int(user_id))
+        username = user.username
+
+        time = datetime.datetime.now()
+        current_time = str(time)
+
+        user.save()
+
+        return HttpResponse(content_type='application/json', content=json.dumps({"user": username, 'time': current_time}))
+
+
+
+
 
 
 

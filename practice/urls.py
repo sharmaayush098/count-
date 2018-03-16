@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^practice/(?P<count_id>\d+)/', views.count_number, name='count'),
     url(r'^reverse/(?P<count_id>\d+)/', views.count_decrease, name='countreverse'),
-
+    url(r'^userdetail/(?P<user_id>\d+)/', views.detail, name='userdetail'),
 ]

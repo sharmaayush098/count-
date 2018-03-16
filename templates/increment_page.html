@@ -17,6 +17,13 @@
     <button type="button" id="increment">Press to increase</button><br>
 
     <button type="button" id="decrement"> Press to decrease</button>
+    <div>
+        Access Details:
+    <ol>
+
+
+    </ol>
+    </div>
 
 
 
@@ -27,6 +34,7 @@
 <script>
     var countId = "{{ count_obj.id }}";
     var countID = "{{ count_obj.id }}";
+    var userId = "{{ user.id }}";
 
     $("#increment").click(function (evt) {
         $.ajax({
@@ -37,6 +45,16 @@
             },
             error: function(response){
                 alert("there was an error!!");
+            }
+        })
+    });
+    $("#increment").click(function(){
+        $.ajax({
+            url:'/userdetail/'+userId+'/',
+            method:'post',
+            success: function (response) {
+                var result = response.user + " incremented at " + response.time +".<br>";
+                $("ol").append(result);
             }
         })
     });
@@ -53,6 +71,17 @@
 
              }
          })
+    });
+    $("#decrement").click(function () {
+        $.ajax({
+            url:'/userdetail/'+userId+'/',
+            method:'post',
+            success: function (response){
+                var result = response.user+" decremented at "+response.time+".<br>";
+                $('ol').append(result);
+            }
+        })
+
     })
 
 
