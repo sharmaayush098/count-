@@ -1,0 +1,342 @@
+GET http://localhost:8000/practicereverse/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T045005.500.html
+
+###
+
+GET http://localhost:8000/practicereverse/1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T032201.200.html
+
+###
+
+GET http://localhost:8000/practice/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T032136.200.html
+
+###
+
+GET http://localhost:8000/practice/1?number=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T032122.200.html
+
+###
+
+GET http://localhost:8000/practice/1?number=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T032117.200.html
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T032041.200.html
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T032009.200.html
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T031823.404.html
+
+###
+
+GET http://localhost:8000/practice?number=0
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice?number=0
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice?number=0
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T014044.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T014043.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T014042-1.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T014042.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T014041.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T014040.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T014037.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T014029.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013932.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013931.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013929.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013849.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013848-3.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013848-2.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013848-1.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013848.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013847-1.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013847.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013846-1.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013846.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013845.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013844.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013843-1.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013843.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013842.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013839.200.json
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013752.500.html
+
+###
+
+POST http://localhost:8000/practice/1?number=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-15T013742.403.html
+
+###
+

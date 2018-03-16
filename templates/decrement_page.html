@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Increment</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+
+</head>
+<body>
+<label for="number" class="sr-only"> counter decrease</label>
+    <div id="reverse">
+        {{ count_object.decrement }}
+    </div>
+    <button type="button" id="decrement">Press to decrease</button>
+</body>
+</html>
+<script>
+    var counterId = "{{ count_object.id }}";
+    $("#decrement").click(function () {
+        $.ajax({
+                url: '/practicereverse/'+counterId+'/',
+                method: 'post',
+            success: function (response) {
+                    $("#reverse").html(response.count);
+
+            },
+            error: function (response) {
+                    alert("there might be an error")
+
+            }
+            }
+        )
+
+    })
+</script>

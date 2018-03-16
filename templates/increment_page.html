@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Increment</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <label for="number" class="sr-only"> counter increase</label>
+    <div id="result">
+        {{ count_obj.increment }}
+    </div>
+    <button type="button" id="increment">Press to increase</button><br>
+
+    <button type="button" id="decrement"> Press to decrease</button>
+
+
+
+
+
+</body>
+</html>
+<script>
+    var countId = "{{ count_obj.id }}";
+    var countID = "{{ count_obj.id }}";
+
+    $("#increment").click(function (evt) {
+        $.ajax({
+            url: '/practice/'+countId+'/',
+            method: 'post',
+            success: function (response) {
+                $("#result").html(response.count);
+            },
+            error: function(response){
+                alert("there was an error!!");
+            }
+        })
+    });
+    $("#decrement").click(function(){
+         $.ajax({
+             url:'/reverse/'+countID+'/',
+             method:'post',
+             success: function (response) {
+                 $("#result").html(response.count);
+
+             },
+             error:function (response) {
+                 alert("there was an error!!");
+
+             }
+         })
+    })
+
+
+
+</script>

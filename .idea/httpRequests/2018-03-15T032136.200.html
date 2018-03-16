@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Increment</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <label for="number" class="sr-only"> number</label>
+    <div id="result">
+        53
+    </div>
+    <button type="button" id="increment">Press to increase</button>
+
+</body>
+</html>
+<script>
+    var countId = "1";
+    $("#increment").click(function (evt) {
+        $.ajax({
+            url: '/practice/'+countId+'/',
+            method: 'post',
+            success: function (response) {
+                $("#result").html(response.count);
+            },
+            error: function(response){
+                alert("there was an error!!");
+            }
+        })
+    })
+</script>
