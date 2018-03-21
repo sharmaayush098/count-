@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from count.models import Count, DataStored
+
+admin.site.register(Count)
+admin.site.register(DataStored)

@@ -23,4 +23,8 @@ urlpatterns = [
     url(r'^practice/(?P<count_id>\d+)/', views.count_number, name='count'),
     url(r'^reverse/(?P<count_id>\d+)/', views.count_decrease, name='countreverse'),
     url(r'^userdetail/(?P<user_id>\d+)', views.detail, name='userdetail'),
+    url(r'^inc_sorting/', views.inc_sorting, name="inc_sorting"),
+    url(r'^dec_sorting/', views.dec_sorting, name="dec_sorting"),
+    url(r'^arrangement', views.arrangement, name='arrangement'),
+
 ]

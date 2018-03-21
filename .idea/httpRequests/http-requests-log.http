@@ -1,164 +1,106 @@
-POST http://localhost:8000/practice/1?username=vikas
+GET http://localhost:8000/sorting/1?username=vikas&action_type=increment
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-GET http://localhost:8000/practice/1?username=vikas
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T060409.200.html
-
-###
-
-GET http://localhost:8000/practice/1?username=vikas
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050920.200.html
-
-###
-
-POST http://localhost:8000/practice/1?username=vikas
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050917.200.json
-
-###
-
-POST http://localhost:8000/practice/1?username=vikas
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050907.200.json
-
-###
-
-GET http://localhost:8000/practice/1?username=vikas
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050902.200.html
-
-###
-
-GET http://localhost:8000/practice/1?username=vikas
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050859.200.html
-
-###
-
-POST http://localhost:8000/practice/1?username=vikas
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050851.200.json
-
-###
-
-GET http://localhost:8000/practice/1?username=vikas
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050835.200.html
-
-###
-
-GET http://localhost:8000/practice/1?username=ayush
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050744.200.html
-
-###
-
-GET http://localhost:8000/practice/1?username=ayush
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050706.200.html
-
-###
-
-GET http://localhost:8000/practice/1?username=ayush
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050654.200.html
-
-###
-
-GET http://localhost:8000/practice/1?username=ayush
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T050653.200.html
-
-###
-
-GET http://localhost:8000/practice/1?username=ayush
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T042802.200.html
-
-###
-
-POST http://localhost:8000/practice/1?username=ayush
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-16T042747.200.json
-
-###
-
-POST http://localhost:8000/userdetail/1?username=ayush
+GET http://localhost:8000/sorting/1?username=vikas&action_type=increment
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-GET http://localhost:8000/userdetail/1?username=ayush
+GET http://localhost:8000/sorting/1?username=vikas&action_type=increment
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-20T040727.500.html
+
+###
+
+GET http://localhost:8000/sorting/1?username=vikas&action_type=increment
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-20T040717.500.html
+
+###
+
+GET http://localhost:8000/sorting/1?username=vikas&action_type=increment
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-20T040705.500.html
+
+###
+
+GET http://localhost:8000/sorting/1?username=vikas&action_type=increment
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-20T040636.500.html
+
+###
+
+GET http://localhost:8000/sorting?username=vikas&action_type=increment
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-20T040555.500.html
+
+###
+
+GET http://localhost:8000/sorting?username=vikas&action_type=increment
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-20T040551.500.html
+
+###
+
+GET http://localhost:8000/sorting?username=vikas&action_type=increment
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-20T040530.500.html
+
+###
+
+GET http://localhost:8000/sorting?username=vikas&action_type=increment
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-POST http://localhost:8000/userdetail/1?username=ayush
+GET http://localhost:8000/sorting?username=vikas&action_type=increment
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-GET http://localhost:8000/userdetail/1?username=ayush
+GET http://localhost:8000/sorting?username=vikas&greater=5
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-GET http://localhost:8000/practicereverse/1?username=ayush
+GET http://localhost:8000/sorting?username=vikas&greater=5
 Accept: */*
 Cache-Control: no-cache
-
-<> 2018-03-16T105012.404.html
 
 ###
 
-GET http://localhost:8000/practicereverse/1
+GET http://localhost:8000/userdetail/1?username=vikas&greater=5
 Accept: */*
 Cache-Control: no-cache
-
-<> 2018-03-15T045005.500.html
 
 ###
 
-GET http://localhost:8000/practicereverse/1
+GET http://localhost:8000/practice/1?username=vikas&greater=5
 Accept: */*
 Cache-Control: no-cache
+
+<> 2018-03-19T042809.200.html
 
 ###
 
@@ -166,13 +108,7 @@ GET http://localhost:8000/practice/1
 Accept: */*
 Cache-Control: no-cache
 
-###
-
-GET http://localhost:8000/practice/1
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-15T032201.200.html
+<> 2018-03-19T042734.200.html
 
 ###
 
@@ -180,195 +116,235 @@ GET http://localhost:8000/practice/1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-03-15T032136.200.html
+<> 2018-03-19T042731.200.html
 
 ###
 
-GET http://localhost:8000/practice/1?number=1
+GET http://localhost:8000/practice/1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-03-15T032122.200.html
+<> 2018-03-19T042727.200.html
 
 ###
 
-GET http://localhost:8000/practice/1?number=1
+GET http://localhost:8000/practice/1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-03-15T032117.200.html
+<> 2018-03-19T042716.200.html
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
+GET http://localhost:8000/practice/1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-03-15T032041.200.html
+<> 2018-03-19T042704.200.html
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
+POST http://localhost:8000/practice/3
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-03-15T032009.200.html
+<> 2018-03-19T032907.500.html
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
+POST http://localhost:8000/practice/2
 Accept: */*
 Cache-Control: no-cache
 
+<> 2018-03-19T032859.200.json
+
 ###
 
-GET http://localhost:8000/practice?number=0
+POST http://localhost:8000/practice/1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-03-15T031823.404.html
+<> 2018-03-19T032837.200.json
 
 ###
 
-GET http://localhost:8000/practice?number=0
+POST http://localhost:8000/practice/1
 Accept: */*
 Cache-Control: no-cache
 
-###
-
-GET http://localhost:8000/practice?number=0
-Accept: */*
-Cache-Control: no-cache
+<> 2018-03-19T032827.200.json
 
 ###
 
-GET http://localhost:8000/practice?number=0
-Accept: */*
-Cache-Control: no-cache
-
-###
-
-GET http://localhost:8000/practice/1?number=0
+POST http://localhost:8000/practice/1?username=vikas&count=45
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-15T014044.200.json
-
-###
-
-GET http://localhost:8000/practice/1?number=0
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-15T014043.200.json
-
-###
-
-GET http://localhost:8000/practice/1?number=0
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-15T014042-1.200.json
-
-###
-
-GET http://localhost:8000/practice/1?number=0
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-15T014042.200.json
-
-###
-
-GET http://localhost:8000/practice/1?number=0
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-15T014041.200.json
-
-###
-
-GET http://localhost:8000/practice/1?number=0
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-15T014040.200.json
-
-###
-
-GET http://localhost:8000/practice/1?number=0
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-15T014037.200.json
-
-###
-
-GET http://localhost:8000/practice/1?number=0
-Accept: */*
-Cache-Control: no-cache
-
-<> 2018-03-15T014029.200.json
-
-###
-
-GET http://localhost:8000/practice/1?number=0
+POST http://localhost:8000/practice/1?username=vikas&count=45
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
+GET http://localhost:8000/practice/1?username=vikas&count=45
 Accept: */*
 Cache-Control: no-cache
-
-<> 2018-03-15T013932.200.json
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
+GET http://localhost:8000/practice/1?username=vikas&increment=45
 Accept: */*
 Cache-Control: no-cache
-
-<> 2018-03-15T013931.200.json
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
+POST http://localhost:8000/practice/1?username=vikas&increment=45
 Accept: */*
 Cache-Control: no-cache
-
-<> 2018-03-15T013929.200.json
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
+POST http://localhost:8000/practice/1?username=vikas
 Accept: */*
 Cache-Control: no-cache
-
-<> 2018-03-15T013849.200.json
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
+POST http://localhost:8000/practice/1?username=vikas&increment=45
 Accept: */*
 Cache-Control: no-cache
-
-<> 2018-03-15T013848-3.200.json
 
 ###
 
-GET http://localhost:8000/practice/1?number=0
+POST http://localhost:8000/practice/1?username=vikas&count=45
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-03-15T013848-2.200.json
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-19T121818.200.html
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-19T121716.500.html
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-19T120951.200.html
+
+###
+
+GET http://localhost:8000/practice/2?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-19T120945.200.html
+
+###
+
+GET http://localhost:8000/practice/2?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-19T120523.200.html
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-19T120453.200.html
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-19T120445.200.html
+
+###
+
+GET http://localhost:8000/practice/1?username=vikas
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-19T120414.500.html
 
 ###
 

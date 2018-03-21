@@ -1,0 +1,4037 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <title>TemplateSyntaxError at /practice/1/</title>
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; }
+    h2 { margin-bottom:.8em; }
+    h2 span { font-size:80%; color:#666; font-weight:normal; }
+    h3 { margin:1em 0 .5em 0; }
+    h4 { margin:0 0 .5em 0; font-weight: normal; }
+    code, pre { font-size: 100%; white-space: pre-wrap; }
+    table { border:1px solid #ccc; border-collapse: collapse; width:100%; background:white; }
+    tbody td, tbody th { vertical-align:top; padding:2px 3px; }
+    thead th {
+      padding:1px 6px 1px 3px; background:#fefefe; text-align:left;
+      font-weight:normal; font-size:11px; border:1px solid #ddd;
+    }
+    tbody th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    table.vars { margin:5px 0 2px 40px; }
+    table.vars td, table.req td { font-family:monospace; }
+    table td.code { width:100%; }
+    table td.code pre { overflow:hidden; }
+    table.source th { color:#666; }
+    table.source td { font-family:monospace; white-space:pre; border-bottom:1px solid #eee; }
+    ul.traceback { list-style-type:none; color: #222; }
+    ul.traceback li.frame { padding-bottom:1em; color:#666; }
+    ul.traceback li.user { background-color:#e0e0e0; color:#000 }
+    div.context { padding:10px 0; overflow:hidden; }
+    div.context ol { padding-left:30px; margin:0 10px; list-style-position: inside; }
+    div.context ol li { font-family:monospace; white-space:pre; color:#777; cursor:pointer; padding-left: 2px; }
+    div.context ol li pre { display:inline; }
+    div.context ol.context-line li { color:#505050; background-color:#dfdfdf; padding: 3px 2px; }
+    div.context ol.context-line li span { position:absolute; right:32px; }
+    .user div.context ol.context-line li { background-color:#bbb; color:#000; }
+    .user div.context ol li { color:#666; }
+    div.commands { margin-left: 40px; }
+    div.commands a { color:#555; text-decoration:none; }
+    .user div.commands a { color: black; }
+    #summary { background: #ffc; }
+    #summary h2 { font-weight: normal; color: #666; }
+    #explanation { background:#eee; }
+    #template, #template-not-exist { background:#f6f6f6; }
+    #template-not-exist ul { margin: 0 0 10px 20px; }
+    #template-not-exist .postmortem-section { margin-bottom: 3px; }
+    #unicode-hint { background:#eee; }
+    #traceback { background:#eee; }
+    #requestinfo { background:#f6f6f6; padding-left:120px; }
+    #summary table { border:none; background:transparent; }
+    #requestinfo h2, #requestinfo h3 { position:relative; margin-left:-100px; }
+    #requestinfo h3 { margin-bottom:-1em; }
+    .error { background: #ffc; }
+    .specific { color:#cc3300; font-weight:bold; }
+    h2 span.commands { font-size:.7em;}
+    span.commands a:link {color:#5E5694;}
+    pre.exception_value { font-family: sans-serif; color: #666; font-size: 1.5em; margin: 10px 0 10px 0; }
+    .append-bottom { margin-bottom: 10px; }
+  </style>
+  
+  <script type="text/javascript">
+  //<!--
+    function getElementsByClassName(oElm, strTagName, strClassName){
+        // Written by Jonathan Snook, http://www.snook.ca/jon; Add-ons by Robert Nyman, http://www.robertnyman.com
+        var arrElements = (strTagName == "*" && document.all)? document.all :
+        oElm.getElementsByTagName(strTagName);
+        var arrReturnElements = new Array();
+        strClassName = strClassName.replace(/\-/g, "\\-");
+        var oRegExp = new RegExp("(^|\\s)" + strClassName + "(\\s|$)");
+        var oElement;
+        for(var i=0; i<arrElements.length; i++){
+            oElement = arrElements[i];
+            if(oRegExp.test(oElement.className)){
+                arrReturnElements.push(oElement);
+            }
+        }
+        return (arrReturnElements)
+    }
+    function hideAll(elems) {
+      for (var e = 0; e < elems.length; e++) {
+        elems[e].style.display = 'none';
+      }
+    }
+    window.onload = function() {
+      hideAll(getElementsByClassName(document, 'table', 'vars'));
+      hideAll(getElementsByClassName(document, 'ol', 'pre-context'));
+      hideAll(getElementsByClassName(document, 'ol', 'post-context'));
+      hideAll(getElementsByClassName(document, 'div', 'pastebin'));
+    }
+    function toggle() {
+      for (var i = 0; i < arguments.length; i++) {
+        var e = document.getElementById(arguments[i]);
+        if (e) {
+          e.style.display = e.style.display == 'none' ? 'block': 'none';
+        }
+      }
+      return false;
+    }
+    function varToggle(link, id) {
+      toggle('v' + id);
+      var s = link.getElementsByTagName('span')[0];
+      var uarr = String.fromCharCode(0x25b6);
+      var darr = String.fromCharCode(0x25bc);
+      s.textContent = s.textContent == uarr ? darr : uarr;
+      return false;
+    }
+    function switchPastebinFriendly(link) {
+      s1 = "Switch to copy-and-paste view";
+      s2 = "Switch back to interactive view";
+      link.textContent = link.textContent.trim() == s1 ? s2: s1;
+      toggle('browserTraceback', 'pastebinTraceback');
+      return false;
+    }
+    //-->
+  </script>
+  
+</head>
+<body>
+<div id="summary">
+  <h1>TemplateSyntaxError at /practice/1/</h1>
+  <pre class="exception_value">&#39;for&#39; statements should have at least four words: for</pre>
+  <table class="meta">
+
+    <tr>
+      <th>Request Method:</th>
+      <td>GET</td>
+    </tr>
+    <tr>
+      <th>Request URL:</th>
+      <td>http://localhost:8000/practice/1/?username=vikas</td>
+    </tr>
+
+    <tr>
+      <th>Django Version:</th>
+      <td>1.11.2</td>
+    </tr>
+
+    <tr>
+      <th>Exception Type:</th>
+      <td>TemplateSyntaxError</td>
+    </tr>
+
+
+    <tr>
+      <th>Exception Value:</th>
+      <td><pre>&#39;for&#39; statements should have at least four words: for</pre></td>
+    </tr>
+
+
+    <tr>
+      <th>Exception Location:</th>
+      <td>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/defaulttags.py in do_for, line 811</td>
+    </tr>
+
+    <tr>
+      <th>Python Executable:</th>
+      <td>/home/ayush/Documents/My_Project/project_env/bin/python3.5</td>
+    </tr>
+    <tr>
+      <th>Python Version:</th>
+      <td>3.5.2</td>
+    </tr>
+    <tr>
+      <th>Python Path:</th>
+      <td><pre>[&#39;/home/ayush/Documents/My_Project/practice&#39;,
+ &#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pydev&#39;,
+ &#39;/home/ayush/Documents/My_Project/practice&#39;,
+ &#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pydev&#39;,
+ &#39;/home/ayush/.PyCharm2017.3/system/cythonExtensions&#39;,
+ &#39;/home/ayush/Documents/My_Project/project_env/lib/python35.zip&#39;,
+ &#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5&#39;,
+ &#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5/plat-x86_64-linux-gnu&#39;,
+ &#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5/lib-dynload&#39;,
+ &#39;/usr/lib/python3.5&#39;,
+ &#39;/usr/lib/python3.5/plat-x86_64-linux-gnu&#39;,
+ &#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages&#39;,
+ &#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pycharm_matplotlib_backend&#39;]</pre></td>
+    </tr>
+    <tr>
+      <th>Server time:</th>
+      <td>Mon, 19 Mar 2018 06:47:15 +0000</td>
+    </tr>
+  </table>
+</div>
+
+
+
+<div id="template">
+   <h2>Error during template rendering</h2>
+   <p>In template <code>/home/ayush/Documents/My_Project/practice/templates/increment_page.html</code>, error at line <strong>29</strong></p>
+   <h3>&#39;for&#39; statements should have at least four words: for</h3>
+   <table class="source cut-top
+       cut-bottom">
+   
+   
+      <tr><th>19</th>
+      <td>    &lt;button type=&quot;button&quot; id=&quot;increment&quot;&gt;Press to increase&lt;/button&gt;
+</td></tr>
+   
+   
+   
+      <tr><th>20</th>
+      <td>
+</td></tr>
+   
+   
+   
+      <tr><th>21</th>
+      <td>    &lt;button type=&quot;button&quot; id=&quot;decrement&quot;&gt; Press to decrease&lt;/button&gt;
+</td></tr>
+   
+   
+   
+      <tr><th>22</th>
+      <td>    &lt;/div&gt;
+</td></tr>
+   
+   
+   
+      <tr><th>23</th>
+      <td>        &lt;div&gt;
+</td></tr>
+   
+   
+   
+      <tr><th>24</th>
+      <td>
+</td></tr>
+   
+   
+   
+      <tr><th>25</th>
+      <td>        Access Details:
+</td></tr>
+   
+   
+   
+      <tr><th>26</th>
+      <td>            {% if count_obj %}
+</td></tr>
+   
+   
+   
+      <tr><th>27</th>
+      <td>            &lt;ol&gt;
+</td></tr>
+   
+   
+   
+      <tr><th>28</th>
+      <td>                &lt;li&gt;
+</td></tr>
+   
+   
+   
+   <tr class="error"><th>29</th>
+     <td>                <span class="specific">{% for  %}</span>
+</td>
+   </tr>
+   
+   
+   
+      <tr><th>30</th>
+      <td>                    {{ user }} {{ time }}
+</td></tr>
+   
+   
+   
+      <tr><th>31</th>
+      <td>
+</td></tr>
+   
+   
+   
+      <tr><th>32</th>
+      <td>                {% endfor %}
+</td></tr>
+   
+   
+   
+      <tr><th>33</th>
+      <td>            &lt;/li&gt;
+</td></tr>
+   
+   
+   
+      <tr><th>34</th>
+      <td>
+</td></tr>
+   
+   
+   
+      <tr><th>35</th>
+      <td>            {% endif %}
+</td></tr>
+   
+   
+   
+      <tr><th>36</th>
+      <td>
+</td></tr>
+   
+   
+   
+      <tr><th>37</th>
+      <td>
+</td></tr>
+   
+   
+   
+      <tr><th>38</th>
+      <td>
+</td></tr>
+   
+   
+   
+      <tr><th>39</th>
+      <td>    &lt;/ol&gt;
+</td></tr>
+   
+   
+   </table>
+</div>
+
+
+<div id="traceback">
+  <h2>Traceback <span class="commands"><a href="#" onclick="return switchPastebinFriendly(this);">
+    Switch to copy-and-paste view</a></span>
+  </h2>
+  
+  <div id="browserTraceback">
+    <ul class="traceback">
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/core/handlers/exception.py</code> in <code>inner</code>
+
+          
+            <div class="context" id="c140577104048200">
+              
+                <ol start="34" class="pre-context" id="pre140577104048200">
+                
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>    This decorator is automatically applied to all middleware to ensure that</pre></li>
+                
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>    no middleware leaks an exception and that the next middleware in the stack</pre></li>
+                
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>    can rely on getting a response instead of an exception.</pre></li>
+                
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>    &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>    @wraps(get_response, assigned=available_attrs(get_response))</pre></li>
+                
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>    def inner(request):</pre></li>
+                
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>        try:</pre></li>
+                
+                </ol>
+              
+              <ol start="41" class="context-line">
+                <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>
+            response = get_response(request)</pre> <span>...</span></li></ol>
+              
+                <ol start='42' class="post-context" id="post140577104048200">
+                  
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>        except Exception as exc:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>            response = response_for_exception(request, exc)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>        return response</pre></li>
+                  
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre>    return inner</pre></li>
+                  
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104048200', 'post140577104048200')"><pre></pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104048200')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104048200">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>exc</td>
+                    <td class="code"><pre>TemplateSyntaxError(&quot;&#39;for&#39; statements should have at least four words: for&quot;,)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>get_response</td>
+                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fdaad0d2710&gt;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/core/handlers/base.py</code> in <code>_get_response</code>
+
+          
+            <div class="context" id="c140577104056264">
+              
+                <ol start="180" class="pre-context" id="pre140577104056264">
+                
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>                break</pre></li>
+                
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>        if response is None:</pre></li>
+                
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>            try:</pre></li>
+                
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre></li>
+                
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>            except Exception as e:</pre></li>
+                
+                </ol>
+              
+              <ol start="187" class="context-line">
+                <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>
+                response = self.process_exception_by_middleware(e, request)</pre> <span>...</span></li></ol>
+              
+                <ol start='188' class="post-context" id="post140577104056264">
+                  
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>        if response is None:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>            if isinstance(callback, types.FunctionType):    # FBV</pre></li>
+                  
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>                view_name = callback.__name__</pre></li>
+                  
+                  <li onclick="toggle('pre140577104056264', 'post140577104056264')"><pre>            else:                                           # CBV</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104056264')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104056264">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>callback</td>
+                    <td class="code"><pre>&lt;function count_number at 0x7fdaa98ef950&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>callback_args</td>
+                    <td class="code"><pre>()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>callback_kwargs</td>
+                    <td class="code"><pre>{&#39;count_id&#39;: &#39;1&#39;}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>middleware_method</td>
+                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x7fdaa906e470&gt;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>resolver</td>
+                    <td class="code"><pre>&lt;RegexURLResolver &#39;practice.urls&#39; (None:None) ^/&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>resolver_match</td>
+                    <td class="code"><pre>ResolverMatch(func=count.views.count_number, args=(), kwargs={&#39;count_id&#39;: &#39;1&#39;}, url_name=count, app_names=[], namespaces=[])</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>response</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fdaad0d2710&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>wrapped_callback</td>
+                    <td class="code"><pre>&lt;function count_number at 0x7fdaa98ef950&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/core/handlers/base.py</code> in <code>_get_response</code>
+
+          
+            <div class="context" id="c140577104056200">
+              
+                <ol start="178" class="pre-context" id="pre140577104056200">
+                
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>            response = middleware_method(request, callback, callback_args, callback_kwargs)</pre></li>
+                
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>            if response:</pre></li>
+                
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>                break</pre></li>
+                
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>        if response is None:</pre></li>
+                
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>            try:</pre></li>
+                
+                </ol>
+              
+              <ol start="185" class="context-line">
+                <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>
+                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre> <span>...</span></li></ol>
+              
+                <ol start='186' class="post-context" id="post140577104056200">
+                  
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>            except Exception as e:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>        if response is None:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104056200', 'post140577104056200')"><pre>            if isinstance(callback, types.FunctionType):    # FBV</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104056200')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104056200">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>callback</td>
+                    <td class="code"><pre>&lt;function count_number at 0x7fdaa98ef950&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>callback_args</td>
+                    <td class="code"><pre>()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>callback_kwargs</td>
+                    <td class="code"><pre>{&#39;count_id&#39;: &#39;1&#39;}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>middleware_method</td>
+                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x7fdaa906e470&gt;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>resolver</td>
+                    <td class="code"><pre>&lt;RegexURLResolver &#39;practice.urls&#39; (None:None) ^/&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>resolver_match</td>
+                    <td class="code"><pre>ResolverMatch(func=count.views.count_number, args=(), kwargs={&#39;count_id&#39;: &#39;1&#39;}, url_name=count, app_names=[], namespaces=[])</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>response</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fdaad0d2710&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>wrapped_callback</td>
+                    <td class="code"><pre>&lt;function count_number at 0x7fdaa98ef950&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/views/decorators/csrf.py</code> in <code>wrapped_view</code>
+
+          
+            <div class="context" id="c140577104056072">
+              
+                <ol start="51" class="pre-context" id="pre140577104056072">
+                
+                  <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>    &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>    Marks a view function as being exempt from the CSRF view protection.</pre></li>
+                
+                  <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>    &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>    # We could just do view_func.csrf_exempt = True, but decorators</pre></li>
+                
+                  <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>    # are nicer if they don&#39;t have side-effects, so we return a new</pre></li>
+                
+                  <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>    # function.</pre></li>
+                
+                  <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>    def wrapped_view(*args, **kwargs):</pre></li>
+                
+                </ol>
+              
+              <ol start="58" class="context-line">
+                <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>
+        return view_func(*args, **kwargs)</pre> <span>...</span></li></ol>
+              
+                <ol start='59' class="post-context" id="post140577104056072">
+                  
+                  <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>    wrapped_view.csrf_exempt = True</pre></li>
+                  
+                  <li onclick="toggle('pre140577104056072', 'post140577104056072')"><pre>    return wraps(view_func, assigned=available_attrs(view_func))(wrapped_view)</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104056072')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104056072">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>(&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;,)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{&#39;count_id&#39;: &#39;1&#39;}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>view_func</td>
+                    <td class="code"><pre>&lt;function count_number at 0x7fdaa98ef840&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame user">
+          <code>/home/ayush/Documents/My_Project/practice/count/views.py</code> in <code>count_number</code>
+
+          
+            <div class="context" id="c140577104055304">
+              
+                <ol start="14" class="pre-context" id="pre140577104055304">
+                
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>    if request.method == &quot;GET&quot;:</pre></li>
+                
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>        count_obj = DataStored.objects.filter(id=count_id)</pre></li>
+                
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>        user_data = count_obj</pre></li>
+                
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>        return render(</pre></li>
+                
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>            request,</pre></li>
+                
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>            &quot;increment_page.html&quot;,</pre></li>
+                
+                </ol>
+              
+              <ol start="21" class="context-line">
+                <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>
+            {&quot;count_obj&quot;: user_data}</pre> <span>...</span></li></ol>
+              
+                <ol start='22' class="post-context" id="post140577104055304">
+                  
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>        )</pre></li>
+                  
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>    elif request.method == &quot;POST&quot;:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>        try:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>            count_obj = Count.objects.get(id=int(count_id))</pre></li>
+                  
+                  <li onclick="toggle('pre140577104055304', 'post140577104055304')"><pre>        except:</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104055304')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104055304">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>count_id</td>
+                    <td class="code"><pre>&#39;1&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>count_obj</td>
+                    <td class="code"><pre>&lt;QuerySet [&lt;DataStored: 1 vikas  09:54:02&gt;]&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>user_data</td>
+                    <td class="code"><pre>&lt;QuerySet [&lt;DataStored: 1 vikas  09:54:02&gt;]&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/shortcuts.py</code> in <code>render</code>
+
+          
+            <div class="context" id="c140577104054792">
+              
+                <ol start="23" class="pre-context" id="pre140577104054792">
+                
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>def render(request, template_name, context=None, content_type=None, status=None, using=None):</pre></li>
+                
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>    &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>    Returns a HttpResponse whose content is filled with the result of calling</pre></li>
+                
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>    django.template.loader.render_to_string() with the passed arguments.</pre></li>
+                
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>    &quot;&quot;&quot;</pre></li>
+                
+                </ol>
+              
+              <ol start="30" class="context-line">
+                <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>
+    content = loader.render_to_string(template_name, context, request, using=using)</pre> <span>...</span></li></ol>
+              
+                <ol start='31' class="post-context" id="post140577104054792">
+                  
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>    return HttpResponse(content, content_type, status)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>def redirect(to, *args, **kwargs):</pre></li>
+                  
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>    &quot;&quot;&quot;</pre></li>
+                  
+                  <li onclick="toggle('pre140577104054792', 'post140577104054792')"><pre>    Returns an HttpResponseRedirect to the appropriate URL for the arguments</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104054792')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104054792">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>content_type</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>context</td>
+                    <td class="code"><pre>{&#39;count_obj&#39;: &lt;QuerySet [&lt;DataStored: 1 vikas  09:54:02&gt;]&gt;}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>status</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>template_name</td>
+                    <td class="code"><pre>&#39;increment_page.html&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>using</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/loader.py</code> in <code>render_to_string</code>
+
+          
+            <div class="context" id="c140577104054472">
+              
+                <ol start="60" class="pre-context" id="pre140577104054472">
+                
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>    Loads a template and renders it with a context. Returns a string.</pre></li>
+                
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>    template_name may be a string or a list of strings.</pre></li>
+                
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>    &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>    if isinstance(template_name, (list, tuple)):</pre></li>
+                
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>        template = select_template(template_name, using=using)</pre></li>
+                
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>    else:</pre></li>
+                
+                </ol>
+              
+              <ol start="67" class="context-line">
+                <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>
+        template = get_template(template_name, using=using)</pre> <span>...</span></li></ol>
+              
+                <ol start='68' class="post-context" id="post140577104054472">
+                  
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>    return template.render(context, request)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>def _engine_list(using=None):</pre></li>
+                  
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre>    return engines.all() if using is None else [engines[using]]</pre></li>
+                  
+                  <li onclick="toggle('pre140577104054472', 'post140577104054472')"><pre></pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104054472')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104054472">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>context</td>
+                    <td class="code"><pre>{&#39;count_obj&#39;: &lt;QuerySet [&lt;DataStored: 1 vikas  09:54:02&gt;]&gt;}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>template_name</td>
+                    <td class="code"><pre>&#39;increment_page.html&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>using</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/loader.py</code> in <code>get_template</code>
+
+          
+            <div class="context" id="c140577104054216">
+              
+                <ol start="14" class="pre-context" id="pre140577104054216">
+                
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>    Raises TemplateDoesNotExist if no such template exists.</pre></li>
+                
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>    &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>    chain = []</pre></li>
+                
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>    engines = _engine_list(using)</pre></li>
+                
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>    for engine in engines:</pre></li>
+                
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>        try:</pre></li>
+                
+                </ol>
+              
+              <ol start="21" class="context-line">
+                <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>
+            return engine.get_template(template_name)</pre> <span>...</span></li></ol>
+              
+                <ol start='22' class="post-context" id="post140577104054216">
+                  
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>        except TemplateDoesNotExist as e:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>            chain.append(e)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre>    raise TemplateDoesNotExist(template_name, chain=chain)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104054216', 'post140577104054216')"><pre></pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104054216')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104054216">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>chain</td>
+                    <td class="code"><pre>[]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>engine</td>
+                    <td class="code"><pre>&lt;django.template.backends.django.DjangoTemplates object at 0x7fdaad11eac8&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>engines</td>
+                    <td class="code"><pre>[&lt;django.template.backends.django.DjangoTemplates object at 0x7fdaad11eac8&gt;]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>template_name</td>
+                    <td class="code"><pre>&#39;increment_page.html&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>using</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/backends/django.py</code> in <code>get_template</code>
+
+          
+            <div class="context" id="c140577104053512">
+              
+                <ol start="32" class="pre-context" id="pre140577104053512">
+                
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>        self.engine = Engine(self.dirs, self.app_dirs, **options)</pre></li>
+                
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>    def from_string(self, template_code):</pre></li>
+                
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>        return Template(self.engine.from_string(template_code), self)</pre></li>
+                
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>    def get_template(self, template_name):</pre></li>
+                
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>        try:</pre></li>
+                
+                </ol>
+              
+              <ol start="39" class="context-line">
+                <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>
+            return Template(self.engine.get_template(template_name), self)</pre> <span>...</span></li></ol>
+              
+                <ol start='40' class="post-context" id="post140577104053512">
+                  
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>        except TemplateDoesNotExist as exc:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>            reraise(exc, self)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>    def get_templatetag_libraries(self, custom_libraries):</pre></li>
+                  
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>        &quot;&quot;&quot;</pre></li>
+                  
+                  <li onclick="toggle('pre140577104053512', 'post140577104053512')"><pre>        Return a collation of template tag libraries from installed</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104053512')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104053512">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.backends.django.DjangoTemplates object at 0x7fdaad11eac8&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>template_name</td>
+                    <td class="code"><pre>&#39;increment_page.html&#39;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/engine.py</code> in <code>get_template</code>
+
+          
+            <div class="context" id="c140577104053064">
+              
+                <ol start="155" class="pre-context" id="pre140577104053064">
+                
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>        return Template(template_code, engine=self)</pre></li>
+                
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>    def get_template(self, template_name):</pre></li>
+                
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>        &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>        Returns a compiled Template object for the given template name,</pre></li>
+                
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>        handling template inheritance recursively.</pre></li>
+                
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>        &quot;&quot;&quot;</pre></li>
+                
+                </ol>
+              
+              <ol start="162" class="context-line">
+                <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>
+        template, origin = self.find_template(template_name)</pre> <span>...</span></li></ol>
+              
+                <ol start='163' class="post-context" id="post140577104053064">
+                  
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>        if not hasattr(template, &#39;render&#39;):</pre></li>
+                  
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>            # template needs to be compiled</pre></li>
+                  
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>            template = Template(template, origin, template_name, engine=self)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>        return template</pre></li>
+                  
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104053064', 'post140577104053064')"><pre>    def render_to_string(self, template_name, context=None):</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104053064')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104053064">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.engine.Engine object at 0x7fdaaa75e390&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>template_name</td>
+                    <td class="code"><pre>&#39;increment_page.html&#39;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/engine.py</code> in <code>find_template</code>
+
+          
+            <div class="context" id="c140577104052808">
+              
+                <ol start="129" class="pre-context" id="pre140577104052808">
+                
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>    def find_template(self, name, dirs=None, skip=None):</pre></li>
+                
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>        tried = []</pre></li>
+                
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>        for loader in self.template_loaders:</pre></li>
+                
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>            if loader.supports_recursion:</pre></li>
+                
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>                try:</pre></li>
+                
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>                    template = loader.get_template(</pre></li>
+                
+                </ol>
+              
+              <ol start="136" class="context-line">
+                <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>
+                        name, template_dirs=dirs, skip=skip,</pre> <span>...</span></li></ol>
+              
+                <ol start='137' class="post-context" id="post140577104052808">
+                  
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>                    )</pre></li>
+                  
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>                    return template, template.origin</pre></li>
+                  
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>                except TemplateDoesNotExist as e:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>                    tried.extend(e.tried)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>            else:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104052808', 'post140577104052808')"><pre>                # RemovedInDjango20Warning: Use old api for non-recursive</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104052808')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104052808">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>dirs</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>loader</td>
+                    <td class="code"><pre>&lt;django.template.loaders.filesystem.Loader object at 0x7fdaa905ce10&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>name</td>
+                    <td class="code"><pre>&#39;increment_page.html&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.engine.Engine object at 0x7fdaaa75e390&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>skip</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>tried</td>
+                    <td class="code"><pre>[]</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/loaders/base.py</code> in <code>get_template</code>
+
+          
+            <div class="context" id="c140577104052552">
+              
+                <ol start="37" class="pre-context" id="pre140577104052552">
+                
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>            try:</pre></li>
+                
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>                contents = self.get_contents(origin)</pre></li>
+                
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>            except TemplateDoesNotExist:</pre></li>
+                
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>                tried.append((origin, &#39;Source does not exist&#39;))</pre></li>
+                
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>                continue</pre></li>
+                
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>            else:</pre></li>
+                
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>                return Template(</pre></li>
+                
+                </ol>
+              
+              <ol start="44" class="context-line">
+                <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>
+                    contents, origin, origin.template_name, self.engine,</pre> <span>...</span></li></ol>
+              
+                <ol start='45' class="post-context" id="post140577104052552">
+                  
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>                )</pre></li>
+                  
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>        raise TemplateDoesNotExist(template_name, tried=tried)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>    def load_template(self, template_name, template_dirs=None):</pre></li>
+                  
+                  <li onclick="toggle('pre140577104052552', 'post140577104052552')"><pre>        warnings.warn(</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104052552')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104052552">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>[&#39;increment_page.html&#39;, None]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>contents</td>
+                    <td class="code"><pre>(&#39;&lt;!DOCTYPE html&gt;\n&#39;
+ &#39;&lt;html lang=&quot;en&quot;&gt;\n&#39;
+ &#39;&lt;head&gt;\n&#39;
+ &#39;    &lt;meta charset=&quot;UTF-8&quot;&gt;\n&#39;
+ &#39;    &lt;title&gt;Increment&lt;/title&gt;\n&#39;
+ &#39;    &lt;script\n&#39;
+ &#39;\t\t\t  src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;\n&#39;
+ &#39;\t\t\t  integrity=&quot;sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=&quot;\n&#39;
+ &#39;\t\t\t  crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;&lt;/head&gt;\n&#39;
+ &#39;&lt;body bgcolor=&quot;#ffe4c4&quot;&gt;\n&#39;
+ &#39;&lt;div align=&quot;center&quot;&gt;\n&#39;
+ &#39;    &lt;h1&gt;&lt;label for=&quot;number&quot; class=&quot;sr-only&quot;&gt; Counter&lt;/label&gt;&lt;/h1&gt;\n&#39;
+ &#39;    &lt;div id=&quot;result&quot; style=&quot;font-size: x-large&quot;&gt;\n&#39;
+ &#39;         {{ count_obj.increment }}\n&#39;
+ &#39;    &lt;/div&gt;\n&#39;
+ &#39;    &lt;div class=&quot;add-row&quot;&gt;\n&#39;
+ &#39;    &lt;button type=&quot;button&quot; id=&quot;increment&quot;&gt;Press to increase&lt;/button&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;    &lt;button type=&quot;button&quot; id=&quot;decrement&quot;&gt; Press to decrease&lt;/button&gt;\n&#39;
+ &#39;    &lt;/div&gt;\n&#39;
+ &#39;        &lt;div&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;        Access Details:\n&#39;
+ &#39;            {% if count_obj %}\n&#39;
+ &#39;            &lt;ol&gt;\n&#39;
+ &#39;                &lt;li&gt;\n&#39;
+ &#39;                {% for  %}\n&#39;
+ &#39;                    {{ user }} {{ time }}\n&#39;
+ &#39;\n&#39;
+ &#39;                {% endfor %}\n&#39;
+ &#39;            &lt;/li&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;            {% endif %}\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;    &lt;/ol&gt;\n&#39;
+ &#39;    &lt;/div&gt;\n&#39;
+ &#39;&lt;/div&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;&lt;/body&gt;\n&#39;
+ &#39;&lt;/html&gt;\n&#39;
+ &#39;&lt;script&gt;\n&#39;
+ &#39;    var countId = &quot;{{ count_obj.id }}&quot;;\n&#39;
+ &#39;    var countID = &quot;{{ count_obj.id }}&quot;;\n&#39;
+ &#39;    var userId = &quot;{{ user.id }}&quot;;\n&#39;
+ &#39;\n&#39;
+ &#39;    $(&quot;#increment&quot;).click(function (evt) {\n&#39;
+ &#39;        $.ajax({\n&#39;
+ &quot;            url: &#39;/practice/&#39;+countId+&#39;/&#39;,\n&quot;
+ &quot;            method: &#39;post&#39;,\n&quot;
+ &#39;            success: function (response) {\n&#39;
+ &#39;                $(&quot;#result&quot;).html(response.count);\n&#39;
+ &#39;            },\n&#39;
+ &#39;            error: function(response){\n&#39;
+ &#39;                alert(&quot;there was an error!!&quot;);\n&#39;
+ &#39;            }\n&#39;
+ &#39;        })\n&#39;
+ &#39;    });\n&#39;
+ &#39;    $(&quot;#increment&quot;).click(function(){\n&#39;
+ &#39;        $.ajax({\n&#39;
+ &quot;            url:&#39;/userdetail/&#39;+userId+&#39;/&#39;,\n&quot;
+ &quot;            method:&#39;post&#39;,\n&quot;
+ &#39;            success: function (response) {\n&#39;
+ &#39;                var result = response.user + &quot; incremented at &quot; + &#39;
+ &#39;response.time +&quot;.&lt;br&gt;&quot;;\n&#39;
+ &#39;                $(&quot;ol&quot;).append(result);\n&#39;
+ &#39;            }\n&#39;
+ &#39;        })\n&#39;
+ &#39;    });\n&#39;
+ &#39;    $(&quot;#decrement&quot;).click(function(){\n&#39;
+ &#39;         $.ajax({\n&#39;
+ &quot;             url:&#39;/reverse/&#39;+countID+&#39;/&#39;,\n&quot;
+ &quot;             method:&#39;post&#39;,\n&quot;
+ &#39;             success: function (response) {\n&#39;
+ &#39;                 $(&quot;#result&quot;).html(response.count);\n&#39;
+ &#39;\n&#39;
+ &#39;             },\n&#39;
+ &#39;             error:function (response) {\n&#39;
+ &#39;                 alert(&quot;there was an error!!&quot;);\n&#39;
+ &#39;\n&#39;
+ &#39;             }\n&#39;
+ &#39;         })\n&#39;
+ &#39;    });\n&#39;
+ &#39;    $(&quot;#decrement&quot;).click(function () {\n&#39;
+ &#39;        $.ajax({\n&#39;
+ &quot;            url:&#39;/userdetail/&#39;+userId+&#39;/&#39;,\n&quot;
+ &quot;            method:&#39;post&#39;,\n&quot;
+ &#39;            success: function (response){\n&#39;
+ &#39;                var result = response.user+&quot; decremented at &#39;
+ &#39;&quot;+response.time+&quot;.&lt;br&gt;&quot;;\n&#39;
+ &quot;                $(&#39;ol&#39;).append(result);\n&quot;
+ &#39;            }\n&#39;
+ &#39;        })\n&#39;
+ &#39;\n&#39;
+ &#39;    })\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;&lt;/script&gt;&#39;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>origin</td>
+                    <td class="code"><pre>&lt;django.template.base.Origin object at 0x7fdaa8e0b208&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.loaders.filesystem.Loader object at 0x7fdaa905ce10&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>skip</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>template_dirs</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>template_name</td>
+                    <td class="code"><pre>&#39;increment_page.html&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>tried</td>
+                    <td class="code"><pre>[]</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py</code> in <code>__init__</code>
+
+          
+            <div class="context" id="c140577104040712">
+              
+                <ol start="184" class="pre-context" id="pre140577104040712">
+                
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>            engine = Engine.get_default()</pre></li>
+                
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>        if origin is None:</pre></li>
+                
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>            origin = Origin(UNKNOWN_SOURCE)</pre></li>
+                
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>        self.name = name</pre></li>
+                
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>        self.origin = origin</pre></li>
+                
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>        self.engine = engine</pre></li>
+                
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>        self.source = template_string</pre></li>
+                
+                </ol>
+              
+              <ol start="191" class="context-line">
+                <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>
+        self.nodelist = self.compile_nodelist()</pre> <span>...</span></li></ol>
+              
+                <ol start='192' class="post-context" id="post140577104040712">
+                  
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>    def __iter__(self):</pre></li>
+                  
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>        for node in self.nodelist:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>            for subnode in node:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre>                yield subnode</pre></li>
+                  
+                  <li onclick="toggle('pre140577104040712', 'post140577104040712')"><pre></pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104040712')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104040712">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>engine</td>
+                    <td class="code"><pre>&lt;django.template.engine.Engine object at 0x7fdaaa75e390&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>name</td>
+                    <td class="code"><pre>&#39;increment_page.html&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>origin</td>
+                    <td class="code"><pre>&lt;django.template.base.Origin object at 0x7fdaa8e0b208&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.base.Template object at 0x7fdaa8e0ba58&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>template_string</td>
+                    <td class="code"><pre>(&#39;&lt;!DOCTYPE html&gt;\n&#39;
+ &#39;&lt;html lang=&quot;en&quot;&gt;\n&#39;
+ &#39;&lt;head&gt;\n&#39;
+ &#39;    &lt;meta charset=&quot;UTF-8&quot;&gt;\n&#39;
+ &#39;    &lt;title&gt;Increment&lt;/title&gt;\n&#39;
+ &#39;    &lt;script\n&#39;
+ &#39;\t\t\t  src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;\n&#39;
+ &#39;\t\t\t  integrity=&quot;sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=&quot;\n&#39;
+ &#39;\t\t\t  crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;&lt;/head&gt;\n&#39;
+ &#39;&lt;body bgcolor=&quot;#ffe4c4&quot;&gt;\n&#39;
+ &#39;&lt;div align=&quot;center&quot;&gt;\n&#39;
+ &#39;    &lt;h1&gt;&lt;label for=&quot;number&quot; class=&quot;sr-only&quot;&gt; Counter&lt;/label&gt;&lt;/h1&gt;\n&#39;
+ &#39;    &lt;div id=&quot;result&quot; style=&quot;font-size: x-large&quot;&gt;\n&#39;
+ &#39;         {{ count_obj.increment }}\n&#39;
+ &#39;    &lt;/div&gt;\n&#39;
+ &#39;    &lt;div class=&quot;add-row&quot;&gt;\n&#39;
+ &#39;    &lt;button type=&quot;button&quot; id=&quot;increment&quot;&gt;Press to increase&lt;/button&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;    &lt;button type=&quot;button&quot; id=&quot;decrement&quot;&gt; Press to decrease&lt;/button&gt;\n&#39;
+ &#39;    &lt;/div&gt;\n&#39;
+ &#39;        &lt;div&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;        Access Details:\n&#39;
+ &#39;            {% if count_obj %}\n&#39;
+ &#39;            &lt;ol&gt;\n&#39;
+ &#39;                &lt;li&gt;\n&#39;
+ &#39;                {% for  %}\n&#39;
+ &#39;                    {{ user }} {{ time }}\n&#39;
+ &#39;\n&#39;
+ &#39;                {% endfor %}\n&#39;
+ &#39;            &lt;/li&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;            {% endif %}\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;    &lt;/ol&gt;\n&#39;
+ &#39;    &lt;/div&gt;\n&#39;
+ &#39;&lt;/div&gt;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;&lt;/body&gt;\n&#39;
+ &#39;&lt;/html&gt;\n&#39;
+ &#39;&lt;script&gt;\n&#39;
+ &#39;    var countId = &quot;{{ count_obj.id }}&quot;;\n&#39;
+ &#39;    var countID = &quot;{{ count_obj.id }}&quot;;\n&#39;
+ &#39;    var userId = &quot;{{ user.id }}&quot;;\n&#39;
+ &#39;\n&#39;
+ &#39;    $(&quot;#increment&quot;).click(function (evt) {\n&#39;
+ &#39;        $.ajax({\n&#39;
+ &quot;            url: &#39;/practice/&#39;+countId+&#39;/&#39;,\n&quot;
+ &quot;            method: &#39;post&#39;,\n&quot;
+ &#39;            success: function (response) {\n&#39;
+ &#39;                $(&quot;#result&quot;).html(response.count);\n&#39;
+ &#39;            },\n&#39;
+ &#39;            error: function(response){\n&#39;
+ &#39;                alert(&quot;there was an error!!&quot;);\n&#39;
+ &#39;            }\n&#39;
+ &#39;        })\n&#39;
+ &#39;    });\n&#39;
+ &#39;    $(&quot;#increment&quot;).click(function(){\n&#39;
+ &#39;        $.ajax({\n&#39;
+ &quot;            url:&#39;/userdetail/&#39;+userId+&#39;/&#39;,\n&quot;
+ &quot;            method:&#39;post&#39;,\n&quot;
+ &#39;            success: function (response) {\n&#39;
+ &#39;                var result = response.user + &quot; incremented at &quot; + &#39;
+ &#39;response.time +&quot;.&lt;br&gt;&quot;;\n&#39;
+ &#39;                $(&quot;ol&quot;).append(result);\n&#39;
+ &#39;            }\n&#39;
+ &#39;        })\n&#39;
+ &#39;    });\n&#39;
+ &#39;    $(&quot;#decrement&quot;).click(function(){\n&#39;
+ &#39;         $.ajax({\n&#39;
+ &quot;             url:&#39;/reverse/&#39;+countID+&#39;/&#39;,\n&quot;
+ &quot;             method:&#39;post&#39;,\n&quot;
+ &#39;             success: function (response) {\n&#39;
+ &#39;                 $(&quot;#result&quot;).html(response.count);\n&#39;
+ &#39;\n&#39;
+ &#39;             },\n&#39;
+ &#39;             error:function (response) {\n&#39;
+ &#39;                 alert(&quot;there was an error!!&quot;);\n&#39;
+ &#39;\n&#39;
+ &#39;             }\n&#39;
+ &#39;         })\n&#39;
+ &#39;    });\n&#39;
+ &#39;    $(&quot;#decrement&quot;).click(function () {\n&#39;
+ &#39;        $.ajax({\n&#39;
+ &quot;            url:&#39;/userdetail/&#39;+userId+&#39;/&#39;,\n&quot;
+ &quot;            method:&#39;post&#39;,\n&quot;
+ &#39;            success: function (response){\n&#39;
+ &#39;                var result = response.user+&quot; decremented at &#39;
+ &#39;&quot;+response.time+&quot;.&lt;br&gt;&quot;;\n&#39;
+ &quot;                $(&#39;ol&#39;).append(result);\n&quot;
+ &#39;            }\n&#39;
+ &#39;        })\n&#39;
+ &#39;\n&#39;
+ &#39;    })\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;\n&#39;
+ &#39;&lt;/script&gt;&#39;)</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py</code> in <code>compile_nodelist</code>
+
+          
+            <div class="context" id="c140577104014216">
+              
+                <ol start="223" class="pre-context" id="pre140577104014216">
+                
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>        tokens = lexer.tokenize()</pre></li>
+                
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>        parser = Parser(</pre></li>
+                
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>            tokens, self.engine.template_libraries, self.engine.template_builtins,</pre></li>
+                
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>            self.origin,</pre></li>
+                
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>        )</pre></li>
+                
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>        try:</pre></li>
+                
+                </ol>
+              
+              <ol start="230" class="context-line">
+                <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>
+            return parser.parse()</pre> <span>...</span></li></ol>
+              
+                <ol start='231' class="post-context" id="post140577104014216">
+                  
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>        except Exception as e:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>            if self.engine.debug:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>                e.template_debug = self.get_exception_info(e, e.token)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>            raise</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104014216', 'post140577104014216')"><pre>    def get_exception_info(self, exception, token):</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104014216')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104014216">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>lexer</td>
+                    <td class="code"><pre>&lt;django.template.base.DebugLexer object at 0x7fdaa8e0b908&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>parser</td>
+                    <td class="code"><pre>&lt;django.template.base.Parser object at 0x7fdaa8e0bfd0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.base.Template object at 0x7fdaa8e0ba58&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>tokens</td>
+                    <td class="code"><pre>[&lt;django.template.base.Token object at 0x7fdaa8e0bba8&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bbe0&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bc50&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bc88&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bcf8&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bd68&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bda0&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bdd8&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0be48&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0be80&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0beb8&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bef0&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bf28&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0bf98&gt;,
+ &lt;django.template.base.Token object at 0x7fdaa8e0ba20&gt;]</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py</code> in <code>parse</code>
+
+          
+            <div class="context" id="c140577104014152">
+              
+                <ol start="508" class="pre-context" id="pre140577104014152">
+                
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                except KeyError:</pre></li>
+                
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
+                
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                # the node list.</pre></li>
+                
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                try:</pre></li>
+                
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
+                
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                except Exception as e:</pre></li>
+                
+                </ol>
+              
+              <ol start="515" class="context-line">
+                <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>
+                    raise self.error(token, e)</pre> <span>...</span></li></ol>
+              
+                <ol start='516' class="post-context" id="post140577104014152">
+                  
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>                self.command_stack.pop()</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>        if parse_until:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>            self.unclosed_block_tag(parse_until)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014152', 'post140577104014152')"><pre>        return nodelist</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104014152')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104014152">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>command</td>
+                    <td class="code"><pre>&#39;if&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>compile_func</td>
+                    <td class="code"><pre>&lt;function do_if at 0x7fdaad08c598&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>filter_expression</td>
+                    <td class="code"><pre>&lt;django.template.base.FilterExpression object at 0x7fdaa8593080&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>nodelist</td>
+                    <td class="code"><pre>[&lt;TextNode: &#39;&lt;!DOCTYPE html&gt;\n&lt;html lan&#39;&gt;,
+ &lt;Variable Node: count_obj.increment&gt;,
+ &lt;TextNode: &#39;\n    &lt;/div&gt;\n    &lt;div clas&#39;&gt;]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>parse_until</td>
+                    <td class="code"><pre>[]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.base.Parser object at 0x7fdaa8e0bfd0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>token</td>
+                    <td class="code"><pre>&lt;django.template.base.Token object at 0x7fdaa8e0bac8&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>var_node</td>
+                    <td class="code"><pre>&lt;Variable Node: count_obj.increment&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py</code> in <code>parse</code>
+
+          
+            <div class="context" id="c140577104013960">
+              
+                <ol start="506" class="pre-context" id="pre140577104013960">
+                
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                try:</pre></li>
+                
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                    compile_func = self.tags[command]</pre></li>
+                
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                except KeyError:</pre></li>
+                
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
+                
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                # the node list.</pre></li>
+                
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                try:</pre></li>
+                
+                </ol>
+              
+              <ol start="513" class="context-line">
+                <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>
+                    compiled_result = compile_func(self, token)</pre> <span>...</span></li></ol>
+              
+                <ol start='514' class="post-context" id="post140577104013960">
+                  
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                except Exception as e:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                    raise self.error(token, e)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>                self.command_stack.pop()</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013960', 'post140577104013960')"><pre>        if parse_until:</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104013960')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104013960">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>command</td>
+                    <td class="code"><pre>&#39;if&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>compile_func</td>
+                    <td class="code"><pre>&lt;function do_if at 0x7fdaad08c598&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>filter_expression</td>
+                    <td class="code"><pre>&lt;django.template.base.FilterExpression object at 0x7fdaa8593080&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>nodelist</td>
+                    <td class="code"><pre>[&lt;TextNode: &#39;&lt;!DOCTYPE html&gt;\n&lt;html lan&#39;&gt;,
+ &lt;Variable Node: count_obj.increment&gt;,
+ &lt;TextNode: &#39;\n    &lt;/div&gt;\n    &lt;div clas&#39;&gt;]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>parse_until</td>
+                    <td class="code"><pre>[]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.base.Parser object at 0x7fdaa8e0bfd0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>token</td>
+                    <td class="code"><pre>&lt;django.template.base.Token object at 0x7fdaa8e0bac8&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>var_node</td>
+                    <td class="code"><pre>&lt;Variable Node: count_obj.increment&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/defaulttags.py</code> in <code>do_if</code>
+
+          
+            <div class="context" id="c140577104014024">
+              
+                <ol start="962" class="pre-context" id="pre140577104014024">
+                
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    ``==``, ``!=``, ``&gt;``, ``&gt;=``, ``&lt;`` and ``&lt;=``.</pre></li>
+                
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    Operator precedence follows Python.</pre></li>
+                
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    # {% if ... %}</pre></li>
+                
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    bits = token.split_contents()[1:]</pre></li>
+                
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    condition = TemplateIfParser(parser, bits).parse()</pre></li>
+                
+                </ol>
+              
+              <ol start="969" class="context-line">
+                <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>
+    nodelist = parser.parse((&#39;elif&#39;, &#39;else&#39;, &#39;endif&#39;))</pre> <span>...</span></li></ol>
+              
+                <ol start='970' class="post-context" id="post140577104014024">
+                  
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    conditions_nodelists = [(condition, nodelist)]</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    token = parser.next_token()</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    # {% elif ... %} (repeatable)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>    while token.contents.startswith(&#39;elif&#39;):</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014024', 'post140577104014024')"><pre>        bits = token.split_contents()[1:]</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104014024')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104014024">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>bits</td>
+                    <td class="code"><pre>[&#39;count_obj&#39;]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>condition</td>
+                    <td class="code"><pre>(literal &lt;django.template.base.FilterExpression object at 0x7fdaa8593198&gt;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>parser</td>
+                    <td class="code"><pre>&lt;django.template.base.Parser object at 0x7fdaa8e0bfd0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>token</td>
+                    <td class="code"><pre>&lt;django.template.base.Token object at 0x7fdaa8e0bac8&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py</code> in <code>parse</code>
+
+          
+            <div class="context" id="c140577104014088">
+              
+                <ol start="508" class="pre-context" id="pre140577104014088">
+                
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                except KeyError:</pre></li>
+                
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
+                
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                # the node list.</pre></li>
+                
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                try:</pre></li>
+                
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
+                
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                except Exception as e:</pre></li>
+                
+                </ol>
+              
+              <ol start="515" class="context-line">
+                <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>
+                    raise self.error(token, e)</pre> <span>...</span></li></ol>
+              
+                <ol start='516' class="post-context" id="post140577104014088">
+                  
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>                self.command_stack.pop()</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>        if parse_until:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>            self.unclosed_block_tag(parse_until)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104014088', 'post140577104014088')"><pre>        return nodelist</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104014088')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104014088">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>command</td>
+                    <td class="code"><pre>&#39;for&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>compile_func</td>
+                    <td class="code"><pre>&lt;function do_for at 0x7fdaad08c0d0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>nodelist</td>
+                    <td class="code"><pre>[&lt;TextNode: &#39;\n            &lt;ol&gt;\n       &#39;&gt;]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>parse_until</td>
+                    <td class="code"><pre>(&#39;elif&#39;, &#39;else&#39;, &#39;endif&#39;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.base.Parser object at 0x7fdaa8e0bfd0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>token</td>
+                    <td class="code"><pre>&lt;django.template.base.Token object at 0x7fdaa8e0bb38&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py</code> in <code>parse</code>
+
+          
+            <div class="context" id="c140577104013512">
+              
+                <ol start="506" class="pre-context" id="pre140577104013512">
+                
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                try:</pre></li>
+                
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                    compile_func = self.tags[command]</pre></li>
+                
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                except KeyError:</pre></li>
+                
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
+                
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                # the node list.</pre></li>
+                
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                try:</pre></li>
+                
+                </ol>
+              
+              <ol start="513" class="context-line">
+                <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>
+                    compiled_result = compile_func(self, token)</pre> <span>...</span></li></ol>
+              
+                <ol start='514' class="post-context" id="post140577104013512">
+                  
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                except Exception as e:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                    raise self.error(token, e)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>                self.command_stack.pop()</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013512', 'post140577104013512')"><pre>        if parse_until:</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104013512')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104013512">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>command</td>
+                    <td class="code"><pre>&#39;for&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>compile_func</td>
+                    <td class="code"><pre>&lt;function do_for at 0x7fdaad08c0d0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>nodelist</td>
+                    <td class="code"><pre>[&lt;TextNode: &#39;\n            &lt;ol&gt;\n       &#39;&gt;]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>parse_until</td>
+                    <td class="code"><pre>(&#39;elif&#39;, &#39;else&#39;, &#39;endif&#39;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.template.base.Parser object at 0x7fdaa8e0bfd0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>token</td>
+                    <td class="code"><pre>&lt;django.template.base.Token object at 0x7fdaa8e0bb38&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/defaulttags.py</code> in <code>do_for</code>
+
+          
+            <div class="context" id="c140577104013000">
+              
+                <ol start="804" class="pre-context" id="pre140577104013000">
+                
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>        ``forloop.parentloop``      For nested loops, this is the loop &quot;above&quot; the</pre></li>
+                
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>                                    current one</pre></li>
+                
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>        ==========================  ================================================</pre></li>
+                
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>    &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>    bits = token.split_contents()</pre></li>
+                
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>    if len(bits) &lt; 4:</pre></li>
+                
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>        raise TemplateSyntaxError(&quot;&#39;for&#39; statements should have at least four&quot;</pre></li>
+                
+                </ol>
+              
+              <ol start="811" class="context-line">
+                <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>
+                                  &quot; words: %s&quot; % token.contents)</pre> <span>...</span></li></ol>
+              
+                <ol start='812' class="post-context" id="post140577104013000">
+                  
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>    is_reversed = bits[-1] == &#39;reversed&#39;</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>    in_index = -3 if is_reversed else -2</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>    if bits[in_index] != &#39;in&#39;:</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>        raise TemplateSyntaxError(&quot;&#39;for&#39; statements should use the format&quot;</pre></li>
+                  
+                  <li onclick="toggle('pre140577104013000', 'post140577104013000')"><pre>                                  &quot; &#39;for x in y&#39;: %s&quot; % token.contents)</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140577104013000')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140577104013000">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>bits</td>
+                    <td class="code"><pre>[&#39;for&#39;]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>parser</td>
+                    <td class="code"><pre>&lt;django.template.base.Parser object at 0x7fdaa8e0bfd0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>token</td>
+                    <td class="code"><pre>&lt;django.template.base.Token object at 0x7fdaa8e0bb38&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+    </ul>
+  </div>
+  
+  <form action="http://dpaste.com/" name="pasteform" id="pasteform" method="post">
+
+  <div id="pastebinTraceback" class="pastebin">
+    <input type="hidden" name="language" value="PythonConsole">
+    <input type="hidden" name="title"
+      value="TemplateSyntaxError at /practice/1/">
+    <input type="hidden" name="source" value="Django Dpaste Agent">
+    <input type="hidden" name="poster" value="Django">
+    <textarea name="content" id="traceback_area" cols="140" rows="25">
+Environment:
+
+
+Request Method: GET
+Request URL: http://localhost:8000/practice/1/?username=vikas
+
+Django Version: 1.11.2
+Python Version: 3.5.2
+Installed Applications:
+[&#39;django.contrib.admin&#39;,
+ &#39;django.contrib.auth&#39;,
+ &#39;django.contrib.contenttypes&#39;,
+ &#39;django.contrib.sessions&#39;,
+ &#39;django.contrib.messages&#39;,
+ &#39;django.contrib.staticfiles&#39;,
+ &#39;count&#39;]
+Installed Middleware:
+[&#39;django.middleware.security.SecurityMiddleware&#39;,
+ &#39;django.contrib.sessions.middleware.SessionMiddleware&#39;,
+ &#39;django.middleware.common.CommonMiddleware&#39;,
+ &#39;django.middleware.csrf.CsrfViewMiddleware&#39;,
+ &#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;,
+ &#39;django.contrib.messages.middleware.MessageMiddleware&#39;,
+ &#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;]
+
+
+Template error:
+In template /home/ayush/Documents/My_Project/practice/templates/increment_page.html, error at line 29
+   &#39;for&#39; statements should have at least four words: for   19 :     &lt;button type=&quot;button&quot; id=&quot;increment&quot;&gt;Press to increase&lt;/button&gt;
+   20 : 
+   21 :     &lt;button type=&quot;button&quot; id=&quot;decrement&quot;&gt; Press to decrease&lt;/button&gt;
+   22 :     &lt;/div&gt;
+   23 :         &lt;div&gt;
+   24 : 
+   25 :         Access Details:
+   26 :             {% if count_obj %}
+   27 :             &lt;ol&gt;
+   28 :                 &lt;li&gt;
+   29 :                  {% for  %} 
+   30 :                     {{ user }} {{ time }}
+   31 : 
+   32 :                 {% endfor %}
+   33 :             &lt;/li&gt;
+   34 : 
+   35 :             {% endif %}
+   36 : 
+   37 : 
+   38 : 
+   39 :     &lt;/ol&gt;
+
+
+Traceback:
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/core/handlers/exception.py" in inner
+  41.             response = get_response(request)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/core/handlers/base.py" in _get_response
+  187.                 response = self.process_exception_by_middleware(e, request)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/core/handlers/base.py" in _get_response
+  185.                 response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/views/decorators/csrf.py" in wrapped_view
+  58.         return view_func(*args, **kwargs)
+
+File "/home/ayush/Documents/My_Project/practice/count/views.py" in count_number
+  21.             {&quot;count_obj&quot;: user_data}
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/shortcuts.py" in render
+  30.     content = loader.render_to_string(template_name, context, request, using=using)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/loader.py" in render_to_string
+  67.         template = get_template(template_name, using=using)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/loader.py" in get_template
+  21.             return engine.get_template(template_name)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/backends/django.py" in get_template
+  39.             return Template(self.engine.get_template(template_name), self)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/engine.py" in get_template
+  162.         template, origin = self.find_template(template_name)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/engine.py" in find_template
+  136.                         name, template_dirs=dirs, skip=skip,
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/loaders/base.py" in get_template
+  44.                     contents, origin, origin.template_name, self.engine,
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py" in __init__
+  191.         self.nodelist = self.compile_nodelist()
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py" in compile_nodelist
+  230.             return parser.parse()
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py" in parse
+  515.                     raise self.error(token, e)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py" in parse
+  513.                     compiled_result = compile_func(self, token)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/defaulttags.py" in do_if
+  969.     nodelist = parser.parse((&#39;elif&#39;, &#39;else&#39;, &#39;endif&#39;))
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py" in parse
+  515.                     raise self.error(token, e)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/base.py" in parse
+  513.                     compiled_result = compile_func(self, token)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/template/defaulttags.py" in do_for
+  811.                                   &quot; words: %s&quot; % token.contents)
+
+Exception Type: TemplateSyntaxError at /practice/1/
+Exception Value: &#39;for&#39; statements should have at least four words: for
+</textarea>
+  <br><br>
+  <input type="submit" value="Share this traceback on a public website">
+  </div>
+</form>
+</div>
+
+
+
+<div id="requestinfo">
+  <h2>Request information</h2>
+
+
+  
+    <h3 id="user-info">USER</h3>
+    <p>AnonymousUser</p>
+  
+
+  <h3 id="get-info">GET</h3>
+  
+    <table class="req">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+            <td>username</td>
+            <td class="code"><pre>&#39;vikas&#39;</pre></td>
+          </tr>
+        
+      </tbody>
+    </table>
+  
+
+  <h3 id="post-info">POST</h3>
+  
+    <p>No POST data</p>
+  
+  <h3 id="files-info">FILES</h3>
+  
+    <p>No FILES data</p>
+  
+
+
+  <h3 id="cookie-info">COOKIES</h3>
+  
+    <p>No cookie data</p>
+  
+
+  <h3 id="meta-info">META</h3>
+  <table class="req">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>CLUTTER_IM_MODULE</td>
+          <td class="code"><pre>&#39;xim&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>COMPIZ_BIN_PATH</td>
+          <td class="code"><pre>&#39;/usr/bin/&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>COMPIZ_CONFIG_PROFILE</td>
+          <td class="code"><pre>&#39;ubuntu&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CONTENT_LENGTH</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CONTENT_TYPE</td>
+          <td class="code"><pre>&#39;text/plain&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DBUS_SESSION_BUS_ADDRESS</td>
+          <td class="code"><pre>&#39;unix:abstract=/tmp/dbus-GkoLHhDwQI&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULTS_PATH</td>
+          <td class="code"><pre>&#39;/usr/share/gconf/ubuntu.default.path&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DESKTOP_SESSION</td>
+          <td class="code"><pre>&#39;ubuntu&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DISPLAY</td>
+          <td class="code"><pre>&#39;:0&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DJANGO_SETTINGS_MODULE</td>
+          <td class="code"><pre>&#39;practice.settings&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GATEWAY_INTERFACE</td>
+          <td class="code"><pre>&#39;CGI/1.1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GDMSESSION</td>
+          <td class="code"><pre>&#39;ubuntu&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GDM_LANG</td>
+          <td class="code"><pre>&#39;en_US&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GIO_LAUNCHED_DESKTOP_FILE</td>
+          <td class="code"><pre>&#39;/home/ayush/.local/share/applications/jetbrains-pycharm.desktop&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GIO_LAUNCHED_DESKTOP_FILE_PID</td>
+          <td class="code"><pre>&#39;7752&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GNOME_DESKTOP_SESSION_ID</td>
+          <td class="code"><pre>&#39;this-is-deprecated&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GNOME_KEYRING_CONTROL</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GNOME_KEYRING_PID</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GPG_AGENT_INFO</td>
+          <td class="code"><pre>&#39;/home/ayush/.gnupg/S.gpg-agent:0:1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GTK2_MODULES</td>
+          <td class="code"><pre>&#39;overlay-scrollbar&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GTK_IM_MODULE</td>
+          <td class="code"><pre>&#39;ibus&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GTK_MODULES</td>
+          <td class="code"><pre>&#39;gail:atk-bridge:unity-gtk-module&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HOME</td>
+          <td class="code"><pre>&#39;/home/ayush&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_ACCEPT</td>
+          <td class="code"><pre>&#39;*/*&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_ACCEPT_ENCODING</td>
+          <td class="code"><pre>&#39;gzip,deflate&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_CACHE_CONTROL</td>
+          <td class="code"><pre>&#39;no-cache&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_CONNECTION</td>
+          <td class="code"><pre>&#39;Keep-Alive&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_HOST</td>
+          <td class="code"><pre>&#39;localhost:8000&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_USER_AGENT</td>
+          <td class="code"><pre>&#39;Apache-HttpClient/4.5.2 (Java/1.8.0_152-release)&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>IDE_PROJECT_ROOTS</td>
+          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/practice&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>IM_CONFIG_PHASE</td>
+          <td class="code"><pre>&#39;1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>INSTANCE</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>IPYTHONENABLE</td>
+          <td class="code"><pre>&#39;True&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>JOB</td>
+          <td class="code"><pre>&#39;unity-settings-daemon&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANG</td>
+          <td class="code"><pre>&#39;en_IN&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE</td>
+          <td class="code"><pre>&#39;en_IN:en&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LIBRARY_ROOTS</td>
+          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5:/home/ayush/Documents/My_Project/project_env/lib/python3.5/plat-x86_64-linux-gnu:/home/ayush/Documents/My_Project/project_env/lib/python3.5/lib-dynload:/usr/lib/python3.5:/usr/lib/python3.5/plat-x86_64-linux-gnu:/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages:/home/ayush/.PyCharm2017.3/system/python_stubs/-2091879014:/home/ayush/Downloads/pycharm-2017.3.2/helpers/python-skeletons:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/3.5:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/3.4:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/3.3:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/3:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/2and3:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/third_party/3:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/third_party/2and3&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGNAME</td>
+          <td class="code"><pre>&#39;ayush&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MANDATORY_PATH</td>
+          <td class="code"><pre>&#39;/usr/share/gconf/ubuntu.mandatory.path&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PATH</td>
+          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/project_env/bin:/home/ayush/bin:/home/ayush/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PATH_INFO</td>
+          <td class="code"><pre>&#39;/practice/1/&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PS1</td>
+          <td class="code"><pre>&#39;(project_env) &#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PWD</td>
+          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/practice&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PYCHARM_HOSTED</td>
+          <td class="code"><pre>&#39;1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PYCHARM_MATPLOTLIB_PORT</td>
+          <td class="code"><pre>&#39;35739&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PYDEVD_LOAD_VALUES_ASYNC</td>
+          <td class="code"><pre>&#39;True&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PYTHONDONTWRITEBYTECODE</td>
+          <td class="code"><pre>&#39;1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PYTHONIOENCODING</td>
+          <td class="code"><pre>&#39;UTF-8&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PYTHONPATH</td>
+          <td class="code"><pre>&#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pycharm_matplotlib_backend:/home/ayush/Documents/My_Project/practice:/home/ayush/Downloads/pycharm-2017.3.2/helpers/pydev:/home/ayush/.PyCharm2017.3/system/cythonExtensions&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PYTHONUNBUFFERED</td>
+          <td class="code"><pre>&#39;1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>QT4_IM_MODULE</td>
+          <td class="code"><pre>&#39;xim&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>QT_ACCESSIBILITY</td>
+          <td class="code"><pre>&#39;1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>QT_IM_MODULE</td>
+          <td class="code"><pre>&#39;ibus&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>QT_LINUX_ACCESSIBILITY_ALWAYS_ON</td>
+          <td class="code"><pre>&#39;1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>QT_QPA_PLATFORMTHEME</td>
+          <td class="code"><pre>&#39;appmenu-qt5&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>QUERY_STRING</td>
+          <td class="code"><pre>&#39;username=vikas&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REMOTE_ADDR</td>
+          <td class="code"><pre>&#39;127.0.0.1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REMOTE_HOST</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REQUEST_METHOD</td>
+          <td class="code"><pre>&#39;GET&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>RUN_MAIN</td>
+          <td class="code"><pre>&#39;true&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SCRIPT_NAME</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_NAME</td>
+          <td class="code"><pre>&#39;localhost&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_PORT</td>
+          <td class="code"><pre>&#39;8000&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_PROTOCOL</td>
+          <td class="code"><pre>&#39;HTTP/1.1&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_SOFTWARE</td>
+          <td class="code"><pre>&#39;WSGIServer/0.2&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION</td>
+          <td class="code"><pre>&#39;ubuntu&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSIONTYPE</td>
+          <td class="code"><pre>&#39;gnome-session&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_MANAGER</td>
+          <td class="code"><pre>&#39;local/ayush-desktop:@/tmp/.ICE-unix/6940,unix/ayush-desktop:/tmp/.ICE-unix/6940&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SHELL</td>
+          <td class="code"><pre>&#39;/bin/bash&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SHLVL</td>
+          <td class="code"><pre>&#39;0&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SSH_AUTH_SOCK</td>
+          <td class="code"><pre>&#39;/run/user/1000/keyring/ssh&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TZ</td>
+          <td class="code"><pre>&#39;UTC&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>UPSTART_EVENTS</td>
+          <td class="code"><pre>&#39;xsession started&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>UPSTART_INSTANCE</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>UPSTART_JOB</td>
+          <td class="code"><pre>&#39;unity7&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>UPSTART_SESSION</td>
+          <td class="code"><pre>&#39;unix:abstract=/com/ubuntu/upstart-session/1000/6693&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USER</td>
+          <td class="code"><pre>&#39;ayush&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>VIRTUAL_ENV</td>
+          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/project_env&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XAUTHORITY</td>
+          <td class="code"><pre>&#39;/home/ayush/.Xauthority&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_CONFIG_DIRS</td>
+          <td class="code"><pre>&#39;/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_CURRENT_DESKTOP</td>
+          <td class="code"><pre>&#39;Unity&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_DATA_DIRS</td>
+          <td class="code"><pre>&#39;/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_GREETER_DATA_DIR</td>
+          <td class="code"><pre>&#39;/var/lib/lightdm-data/ayush&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_MENU_PREFIX</td>
+          <td class="code"><pre>&#39;gnome-&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_RUNTIME_DIR</td>
+          <td class="code"><pre>&#39;/run/user/1000&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_SEAT</td>
+          <td class="code"><pre>&#39;seat0&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_SEAT_PATH</td>
+          <td class="code"><pre>&#39;/org/freedesktop/DisplayManager/Seat0&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_SESSION_DESKTOP</td>
+          <td class="code"><pre>&#39;ubuntu&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_SESSION_ID</td>
+          <td class="code"><pre>&#39;c2&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_SESSION_PATH</td>
+          <td class="code"><pre>&#39;/org/freedesktop/DisplayManager/Session0&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_SESSION_TYPE</td>
+          <td class="code"><pre>&#39;x11&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XDG_VTNR</td>
+          <td class="code"><pre>&#39;7&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>XMODIFIERS</td>
+          <td class="code"><pre>&#39;@im=ibus&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.errors</td>
+          <td class="code"><pre>&lt;_io.TextIOWrapper name=&#39;&lt;stderr&gt;&#39; mode=&#39;w&#39; encoding=&#39;UTF-8&#39;&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.file_wrapper</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.input</td>
+          <td class="code"><pre>&lt;_io.BufferedReader name=7&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.multiprocess</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.multithread</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.run_once</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.url_scheme</td>
+          <td class="code"><pre>&#39;http&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.version</td>
+          <td class="code"><pre>(1, 0)</pre></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+  <h3 id="settings-info">Settings</h3>
+  <h4>Using settings module <code>practice.settings</code></h4>
+  <table class="req">
+    <thead>
+      <tr>
+        <th>Setting</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>ABSOLUTE_URL_OVERRIDES</td>
+          <td class="code"><pre>{}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ADMINS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ALLOWED_HOSTS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>APPEND_SLASH</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>AUTHENTICATION_BACKENDS</td>
+          <td class="code"><pre>[&#39;django.contrib.auth.backends.ModelBackend&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>AUTH_PASSWORD_VALIDATORS</td>
+          <td class="code"><pre>&#39;********************&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>AUTH_USER_MODEL</td>
+          <td class="code"><pre>&#39;auth.User&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>BASE_DIR</td>
+          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/practice&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHES</td>
+          <td class="code"><pre>{&#39;default&#39;: {&#39;BACKEND&#39;: &#39;django.core.cache.backends.locmem.LocMemCache&#39;}}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHE_MIDDLEWARE_ALIAS</td>
+          <td class="code"><pre>&#39;default&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHE_MIDDLEWARE_KEY_PREFIX</td>
+          <td class="code"><pre>&#39;********************&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHE_MIDDLEWARE_SECONDS</td>
+          <td class="code"><pre>600</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_AGE</td>
+          <td class="code"><pre>31449600</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_DOMAIN</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_HTTPONLY</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_NAME</td>
+          <td class="code"><pre>&#39;csrftoken&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_PATH</td>
+          <td class="code"><pre>&#39;/&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_SECURE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_FAILURE_VIEW</td>
+          <td class="code"><pre>&#39;django.views.csrf.csrf_failure&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_HEADER_NAME</td>
+          <td class="code"><pre>&#39;HTTP_X_CSRFTOKEN&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_TRUSTED_ORIGINS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_USE_SESSIONS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATABASES</td>
+          <td class="code"><pre>{&#39;default&#39;: {&#39;ATOMIC_REQUESTS&#39;: False,
+             &#39;AUTOCOMMIT&#39;: True,
+             &#39;CONN_MAX_AGE&#39;: 0,
+             &#39;ENGINE&#39;: &#39;django.db.backends.sqlite3&#39;,
+             &#39;HOST&#39;: &#39;&#39;,
+             &#39;NAME&#39;: &#39;/home/ayush/Documents/My_Project/practice/db.sqlite3&#39;,
+             &#39;OPTIONS&#39;: {},
+             &#39;PASSWORD&#39;: &#39;********************&#39;,
+             &#39;PORT&#39;: &#39;&#39;,
+             &#39;TEST&#39;: {&#39;CHARSET&#39;: None,
+                      &#39;COLLATION&#39;: None,
+                      &#39;MIRROR&#39;: None,
+                      &#39;NAME&#39;: None},
+             &#39;TIME_ZONE&#39;: None,
+             &#39;USER&#39;: &#39;&#39;}}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATABASE_ROUTERS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATA_UPLOAD_MAX_MEMORY_SIZE</td>
+          <td class="code"><pre>2621440</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATA_UPLOAD_MAX_NUMBER_FIELDS</td>
+          <td class="code"><pre>1000</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATETIME_FORMAT</td>
+          <td class="code"><pre>&#39;N j, Y, P&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATETIME_INPUT_FORMATS</td>
+          <td class="code"><pre>[&#39;%Y-%m-%d %H:%M:%S&#39;,
+ &#39;%Y-%m-%d %H:%M:%S.%f&#39;,
+ &#39;%Y-%m-%d %H:%M&#39;,
+ &#39;%Y-%m-%d&#39;,
+ &#39;%m/%d/%Y %H:%M:%S&#39;,
+ &#39;%m/%d/%Y %H:%M:%S.%f&#39;,
+ &#39;%m/%d/%Y %H:%M&#39;,
+ &#39;%m/%d/%Y&#39;,
+ &#39;%m/%d/%y %H:%M:%S&#39;,
+ &#39;%m/%d/%y %H:%M:%S.%f&#39;,
+ &#39;%m/%d/%y %H:%M&#39;,
+ &#39;%m/%d/%y&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATE_FORMAT</td>
+          <td class="code"><pre>&#39;N j, Y&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATE_INPUT_FORMATS</td>
+          <td class="code"><pre>[&#39;%Y-%m-%d&#39;,
+ &#39;%m/%d/%Y&#39;,
+ &#39;%m/%d/%y&#39;,
+ &#39;%b %d %Y&#39;,
+ &#39;%b %d, %Y&#39;,
+ &#39;%d %b %Y&#39;,
+ &#39;%d %b, %Y&#39;,
+ &#39;%B %d %Y&#39;,
+ &#39;%B %d, %Y&#39;,
+ &#39;%d %B %Y&#39;,
+ &#39;%d %B, %Y&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEBUG</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEBUG_PROPAGATE_EXCEPTIONS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DECIMAL_SEPARATOR</td>
+          <td class="code"><pre>&#39;.&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_CHARSET</td>
+          <td class="code"><pre>&#39;utf-8&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_CONTENT_TYPE</td>
+          <td class="code"><pre>&#39;text/html&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_EXCEPTION_REPORTER_FILTER</td>
+          <td class="code"><pre>&#39;django.views.debug.SafeExceptionReporterFilter&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_FILE_STORAGE</td>
+          <td class="code"><pre>&#39;django.core.files.storage.FileSystemStorage&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_FROM_EMAIL</td>
+          <td class="code"><pre>&#39;webmaster@localhost&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_INDEX_TABLESPACE</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_TABLESPACE</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DISALLOWED_USER_AGENTS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_BACKEND</td>
+          <td class="code"><pre>&#39;django.core.mail.backends.smtp.EmailBackend&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_HOST</td>
+          <td class="code"><pre>&#39;localhost&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_HOST_PASSWORD</td>
+          <td class="code"><pre>&#39;********************&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_HOST_USER</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_PORT</td>
+          <td class="code"><pre>25</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_SSL_CERTFILE</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_SSL_KEYFILE</td>
+          <td class="code"><pre>&#39;********************&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_SUBJECT_PREFIX</td>
+          <td class="code"><pre>&#39;[Django] &#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_TIMEOUT</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_USE_LOCALTIME</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_USE_SSL</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_USE_TLS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_CHARSET</td>
+          <td class="code"><pre>&#39;utf-8&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_DIRECTORY_PERMISSIONS</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_HANDLERS</td>
+          <td class="code"><pre>[&#39;django.core.files.uploadhandler.MemoryFileUploadHandler&#39;,
+ &#39;django.core.files.uploadhandler.TemporaryFileUploadHandler&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_MAX_MEMORY_SIZE</td>
+          <td class="code"><pre>2621440</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_PERMISSIONS</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_TEMP_DIR</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FIRST_DAY_OF_WEEK</td>
+          <td class="code"><pre>0</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FIXTURE_DIRS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FORCE_SCRIPT_NAME</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FORMAT_MODULE_PATH</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FORM_RENDERER</td>
+          <td class="code"><pre>&#39;django.forms.renderers.DjangoTemplates&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>IGNORABLE_404_URLS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>INSTALLED_APPS</td>
+          <td class="code"><pre>[&#39;django.contrib.admin&#39;,
+ &#39;django.contrib.auth&#39;,
+ &#39;django.contrib.contenttypes&#39;,
+ &#39;django.contrib.sessions&#39;,
+ &#39;django.contrib.messages&#39;,
+ &#39;django.contrib.staticfiles&#39;,
+ &#39;count&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>INTERNAL_IPS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGES</td>
+          <td class="code"><pre>[(&#39;af&#39;, &#39;Afrikaans&#39;),
+ (&#39;ar&#39;, &#39;Arabic&#39;),
+ (&#39;ast&#39;, &#39;Asturian&#39;),
+ (&#39;az&#39;, &#39;Azerbaijani&#39;),
+ (&#39;bg&#39;, &#39;Bulgarian&#39;),
+ (&#39;be&#39;, &#39;Belarusian&#39;),
+ (&#39;bn&#39;, &#39;Bengali&#39;),
+ (&#39;br&#39;, &#39;Breton&#39;),
+ (&#39;bs&#39;, &#39;Bosnian&#39;),
+ (&#39;ca&#39;, &#39;Catalan&#39;),
+ (&#39;cs&#39;, &#39;Czech&#39;),
+ (&#39;cy&#39;, &#39;Welsh&#39;),
+ (&#39;da&#39;, &#39;Danish&#39;),
+ (&#39;de&#39;, &#39;German&#39;),
+ (&#39;dsb&#39;, &#39;Lower Sorbian&#39;),
+ (&#39;el&#39;, &#39;Greek&#39;),
+ (&#39;en&#39;, &#39;English&#39;),
+ (&#39;en-au&#39;, &#39;Australian English&#39;),
+ (&#39;en-gb&#39;, &#39;British English&#39;),
+ (&#39;eo&#39;, &#39;Esperanto&#39;),
+ (&#39;es&#39;, &#39;Spanish&#39;),
+ (&#39;es-ar&#39;, &#39;Argentinian Spanish&#39;),
+ (&#39;es-co&#39;, &#39;Colombian Spanish&#39;),
+ (&#39;es-mx&#39;, &#39;Mexican Spanish&#39;),
+ (&#39;es-ni&#39;, &#39;Nicaraguan Spanish&#39;),
+ (&#39;es-ve&#39;, &#39;Venezuelan Spanish&#39;),
+ (&#39;et&#39;, &#39;Estonian&#39;),
+ (&#39;eu&#39;, &#39;Basque&#39;),
+ (&#39;fa&#39;, &#39;Persian&#39;),
+ (&#39;fi&#39;, &#39;Finnish&#39;),
+ (&#39;fr&#39;, &#39;French&#39;),
+ (&#39;fy&#39;, &#39;Frisian&#39;),
+ (&#39;ga&#39;, &#39;Irish&#39;),
+ (&#39;gd&#39;, &#39;Scottish Gaelic&#39;),
+ (&#39;gl&#39;, &#39;Galician&#39;),
+ (&#39;he&#39;, &#39;Hebrew&#39;),
+ (&#39;hi&#39;, &#39;Hindi&#39;),
+ (&#39;hr&#39;, &#39;Croatian&#39;),
+ (&#39;hsb&#39;, &#39;Upper Sorbian&#39;),
+ (&#39;hu&#39;, &#39;Hungarian&#39;),
+ (&#39;ia&#39;, &#39;Interlingua&#39;),
+ (&#39;id&#39;, &#39;Indonesian&#39;),
+ (&#39;io&#39;, &#39;Ido&#39;),
+ (&#39;is&#39;, &#39;Icelandic&#39;),
+ (&#39;it&#39;, &#39;Italian&#39;),
+ (&#39;ja&#39;, &#39;Japanese&#39;),
+ (&#39;ka&#39;, &#39;Georgian&#39;),
+ (&#39;kk&#39;, &#39;Kazakh&#39;),
+ (&#39;km&#39;, &#39;Khmer&#39;),
+ (&#39;kn&#39;, &#39;Kannada&#39;),
+ (&#39;ko&#39;, &#39;Korean&#39;),
+ (&#39;lb&#39;, &#39;Luxembourgish&#39;),
+ (&#39;lt&#39;, &#39;Lithuanian&#39;),
+ (&#39;lv&#39;, &#39;Latvian&#39;),
+ (&#39;mk&#39;, &#39;Macedonian&#39;),
+ (&#39;ml&#39;, &#39;Malayalam&#39;),
+ (&#39;mn&#39;, &#39;Mongolian&#39;),
+ (&#39;mr&#39;, &#39;Marathi&#39;),
+ (&#39;my&#39;, &#39;Burmese&#39;),
+ (&#39;nb&#39;, &#39;Norwegian BokmÃ¥l&#39;),
+ (&#39;ne&#39;, &#39;Nepali&#39;),
+ (&#39;nl&#39;, &#39;Dutch&#39;),
+ (&#39;nn&#39;, &#39;Norwegian Nynorsk&#39;),
+ (&#39;os&#39;, &#39;Ossetic&#39;),
+ (&#39;pa&#39;, &#39;Punjabi&#39;),
+ (&#39;pl&#39;, &#39;Polish&#39;),
+ (&#39;pt&#39;, &#39;Portuguese&#39;),
+ (&#39;pt-br&#39;, &#39;Brazilian Portuguese&#39;),
+ (&#39;ro&#39;, &#39;Romanian&#39;),
+ (&#39;ru&#39;, &#39;Russian&#39;),
+ (&#39;sk&#39;, &#39;Slovak&#39;),
+ (&#39;sl&#39;, &#39;Slovenian&#39;),
+ (&#39;sq&#39;, &#39;Albanian&#39;),
+ (&#39;sr&#39;, &#39;Serbian&#39;),
+ (&#39;sr-latn&#39;, &#39;Serbian Latin&#39;),
+ (&#39;sv&#39;, &#39;Swedish&#39;),
+ (&#39;sw&#39;, &#39;Swahili&#39;),
+ (&#39;ta&#39;, &#39;Tamil&#39;),
+ (&#39;te&#39;, &#39;Telugu&#39;),
+ (&#39;th&#39;, &#39;Thai&#39;),
+ (&#39;tr&#39;, &#39;Turkish&#39;),
+ (&#39;tt&#39;, &#39;Tatar&#39;),
+ (&#39;udm&#39;, &#39;Udmurt&#39;),
+ (&#39;uk&#39;, &#39;Ukrainian&#39;),
+ (&#39;ur&#39;, &#39;Urdu&#39;),
+ (&#39;vi&#39;, &#39;Vietnamese&#39;),
+ (&#39;zh-hans&#39;, &#39;Simplified Chinese&#39;),
+ (&#39;zh-hant&#39;, &#39;Traditional Chinese&#39;)]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGES_BIDI</td>
+          <td class="code"><pre>[&#39;he&#39;, &#39;ar&#39;, &#39;fa&#39;, &#39;ur&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_CODE</td>
+          <td class="code"><pre>&#39;en-us&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_AGE</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_DOMAIN</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_NAME</td>
+          <td class="code"><pre>&#39;django_language&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_PATH</td>
+          <td class="code"><pre>&#39;/&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOCALE_PATHS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGGING</td>
+          <td class="code"><pre>{}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGGING_CONFIG</td>
+          <td class="code"><pre>&#39;logging.config.dictConfig&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGIN_REDIRECT_URL</td>
+          <td class="code"><pre>&#39;/accounts/profile/&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGIN_URL</td>
+          <td class="code"><pre>&#39;/accounts/login/&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGOUT_REDIRECT_URL</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MANAGERS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MEDIA_ROOT</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MEDIA_URL</td>
+          <td class="code"><pre>&#39;&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MESSAGE_STORAGE</td>
+          <td class="code"><pre>&#39;django.contrib.messages.storage.fallback.FallbackStorage&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MIDDLEWARE</td>
+          <td class="code"><pre>[&#39;django.middleware.security.SecurityMiddleware&#39;,
+ &#39;django.contrib.sessions.middleware.SessionMiddleware&#39;,
+ &#39;django.middleware.common.CommonMiddleware&#39;,
+ &#39;django.middleware.csrf.CsrfViewMiddleware&#39;,
+ &#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;,
+ &#39;django.contrib.messages.middleware.MessageMiddleware&#39;,
+ &#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MIDDLEWARE_CLASSES</td>
+          <td class="code"><pre>[&#39;django.middleware.common.CommonMiddleware&#39;,
+ &#39;django.middleware.csrf.CsrfViewMiddleware&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MIGRATION_MODULES</td>
+          <td class="code"><pre>{}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MONTH_DAY_FORMAT</td>
+          <td class="code"><pre>&#39;F j&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>NUMBER_GROUPING</td>
+          <td class="code"><pre>0</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PASSWORD_HASHERS</td>
+          <td class="code"><pre>&#39;********************&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PASSWORD_RESET_TIMEOUT_DAYS</td>
+          <td class="code"><pre>&#39;********************&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PREPEND_WWW</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ROOT_URLCONF</td>
+          <td class="code"><pre>&#39;practice.urls&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECRET_KEY</td>
+          <td class="code"><pre>&#39;********************&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_BROWSER_XSS_FILTER</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_CONTENT_TYPE_NOSNIFF</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_HSTS_INCLUDE_SUBDOMAINS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_HSTS_PRELOAD</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_HSTS_SECONDS</td>
+          <td class="code"><pre>0</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_PROXY_SSL_HEADER</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_REDIRECT_EXEMPT</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_SSL_HOST</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_SSL_REDIRECT</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_EMAIL</td>
+          <td class="code"><pre>&#39;root@localhost&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_CACHE_ALIAS</td>
+          <td class="code"><pre>&#39;default&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_AGE</td>
+          <td class="code"><pre>1209600</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_DOMAIN</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_HTTPONLY</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_NAME</td>
+          <td class="code"><pre>&#39;sessionid&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_PATH</td>
+          <td class="code"><pre>&#39;/&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_SECURE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_ENGINE</td>
+          <td class="code"><pre>&#39;django.contrib.sessions.backends.db&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_EXPIRE_AT_BROWSER_CLOSE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_FILE_PATH</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_SAVE_EVERY_REQUEST</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_SERIALIZER</td>
+          <td class="code"><pre>&#39;django.contrib.sessions.serializers.JSONSerializer&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SETTINGS_MODULE</td>
+          <td class="code"><pre>&#39;practice.settings&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SHORT_DATETIME_FORMAT</td>
+          <td class="code"><pre>&#39;m/d/Y P&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SHORT_DATE_FORMAT</td>
+          <td class="code"><pre>&#39;m/d/Y&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SIGNING_BACKEND</td>
+          <td class="code"><pre>&#39;django.core.signing.TimestampSigner&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SILENCED_SYSTEM_CHECKS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATICFILES_DIRS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATICFILES_FINDERS</td>
+          <td class="code"><pre>[&#39;django.contrib.staticfiles.finders.FileSystemFinder&#39;,
+ &#39;django.contrib.staticfiles.finders.AppDirectoriesFinder&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATICFILES_STORAGE</td>
+          <td class="code"><pre>&#39;django.contrib.staticfiles.storage.StaticFilesStorage&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATIC_ROOT</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATIC_URL</td>
+          <td class="code"><pre>&#39;/static/&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TEMPLATES</td>
+          <td class="code"><pre>[{&#39;APP_DIRS&#39;: True,
+  &#39;BACKEND&#39;: &#39;django.template.backends.django.DjangoTemplates&#39;,
+  &#39;DIRS&#39;: [&#39;/home/ayush/Documents/My_Project/practice/templates&#39;],
+  &#39;OPTIONS&#39;: {&#39;context_processors&#39;: [&#39;django.template.context_processors.debug&#39;,
+                                     &#39;django.template.context_processors.request&#39;,
+                                     &#39;django.contrib.auth.context_processors.auth&#39;,
+                                     &#39;django.contrib.messages.context_processors.messages&#39;]}}]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TEST_NON_SERIALIZED_APPS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TEST_RUNNER</td>
+          <td class="code"><pre>&#39;django.test.runner.DiscoverRunner&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>THOUSAND_SEPARATOR</td>
+          <td class="code"><pre>&#39;,&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TIME_FORMAT</td>
+          <td class="code"><pre>&#39;P&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TIME_INPUT_FORMATS</td>
+          <td class="code"><pre>[&#39;%H:%M:%S&#39;, &#39;%H:%M:%S.%f&#39;, &#39;%H:%M&#39;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TIME_ZONE</td>
+          <td class="code"><pre>&#39;UTC&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_ETAGS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_I18N</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_L10N</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_THOUSAND_SEPARATOR</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_TZ</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_X_FORWARDED_HOST</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_X_FORWARDED_PORT</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>WSGI_APPLICATION</td>
+          <td class="code"><pre>&#39;practice.wsgi.application&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>X_FRAME_OPTIONS</td>
+          <td class="code"><pre>&#39;SAMEORIGIN&#39;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>YEAR_MONTH_FORMAT</td>
+          <td class="code"><pre>&#39;F Y&#39;</pre></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+</div>
+
+  <div id="explanation">
+    <p>
+      You're seeing this error because you have <code>DEBUG = True</code> in your
+      Django settings file. Change that to <code>False</code>, and Django will
+      display a standard page generated by the handler for this status code.
+    </p>
+  </div>
+
+</body>
+</html>

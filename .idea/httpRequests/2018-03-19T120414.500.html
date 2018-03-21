@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="robots" content="NONE,NOARCHIVE">
-  <title>DoesNotExist at /practicereverse/1/</title>
+  <title>ValueError at /practice/1/</title>
   <style type="text/css">
     html * { padding:0; margin:0; }
     body * { padding:10px 20px; }
@@ -123,8 +123,8 @@
 </head>
 <body>
 <div id="summary">
-  <h1>DoesNotExist at /practicereverse/1/</h1>
-  <pre class="exception_value">CountDecrement matching query does not exist.</pre>
+  <h1>ValueError at /practice/1/</h1>
+  <pre class="exception_value">not enough values to unpack (expected 2, got 1)</pre>
   <table class="meta">
 
     <tr>
@@ -133,7 +133,7 @@
     </tr>
     <tr>
       <th>Request URL:</th>
-      <td>http://localhost:8000/practicereverse/1/</td>
+      <td>http://localhost:8000/practice/1/?username=vikas</td>
     </tr>
 
     <tr>
@@ -143,19 +143,19 @@
 
     <tr>
       <th>Exception Type:</th>
-      <td>DoesNotExist</td>
+      <td>ValueError</td>
     </tr>
 
 
     <tr>
       <th>Exception Value:</th>
-      <td><pre>CountDecrement matching query does not exist.</pre></td>
+      <td><pre>not enough values to unpack (expected 2, got 1)</pre></td>
     </tr>
 
 
     <tr>
       <th>Exception Location:</th>
-      <td>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py in get, line 380</td>
+      <td>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/sql/query.py in build_filter, line 1162</td>
     </tr>
 
     <tr>
@@ -169,22 +169,19 @@
     <tr>
       <th>Python Path:</th>
       <td><pre>[&#39;/home/ayush/Documents/My_Project/practice&#39;,
- &#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pydev&#39;,
+ &#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pycharm&#39;,
  &#39;/home/ayush/Documents/My_Project/practice&#39;,
- &#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pydev&#39;,
- &#39;/home/ayush/.PyCharm2017.3/system/cythonExtensions&#39;,
  &#39;/home/ayush/Documents/My_Project/project_env/lib/python35.zip&#39;,
  &#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5&#39;,
  &#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5/plat-x86_64-linux-gnu&#39;,
  &#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5/lib-dynload&#39;,
  &#39;/usr/lib/python3.5&#39;,
  &#39;/usr/lib/python3.5/plat-x86_64-linux-gnu&#39;,
- &#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages&#39;,
- &#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pycharm_matplotlib_backend&#39;]</pre></td>
+ &#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages&#39;]</pre></td>
     </tr>
     <tr>
       <th>Server time:</th>
-      <td>Thu, 15 Mar 2018 11:20:05 +0000</td>
+      <td>Mon, 19 Mar 2018 06:34:14 +0000</td>
     </tr>
   </table>
 </div>
@@ -205,43 +202,43 @@
           <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/core/handlers/exception.py</code> in <code>inner</code>
 
           
-            <div class="context" id="c140333056445960">
+            <div class="context" id="c140168987398856">
               
-                <ol start="34" class="pre-context" id="pre140333056445960">
+                <ol start="34" class="pre-context" id="pre140168987398856">
                 
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>    This decorator is automatically applied to all middleware to ensure that</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>    This decorator is automatically applied to all middleware to ensure that</pre></li>
                 
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>    no middleware leaks an exception and that the next middleware in the stack</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>    no middleware leaks an exception and that the next middleware in the stack</pre></li>
                 
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>    can rely on getting a response instead of an exception.</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>    can rely on getting a response instead of an exception.</pre></li>
                 
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>    &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>    &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>    @wraps(get_response, assigned=available_attrs(get_response))</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>    @wraps(get_response, assigned=available_attrs(get_response))</pre></li>
                 
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>    def inner(request):</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>    def inner(request):</pre></li>
                 
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>        try:</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>        try:</pre></li>
                 
                 </ol>
               
               <ol start="41" class="context-line">
-                <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>
+                <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>
             response = get_response(request)</pre> <span>...</span></li></ol>
               
-                <ol start='42' class="post-context" id="post140333056445960">
+                <ol start='42' class="post-context" id="post140168987398856">
                   
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>        except Exception as exc:</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>        except Exception as exc:</pre></li>
                   
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>            response = response_for_exception(request, exc)</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>            response = response_for_exception(request, exc)</pre></li>
                   
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>        return response</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>        return response</pre></li>
                   
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre>    return inner</pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre>    return inner</pre></li>
                   
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140333056445960', 'post140333056445960')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987398856', 'post140168987398856')"><pre></pre></li>
                   
               </ol>
               
@@ -251,10 +248,10 @@
           
             <div class="commands">
                 
-                    <a href="#" onclick="return varToggle(this, '140333056445960')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '140168987398856')"><span>&#x25b6;</span> Local vars</a>
                 
             </div>
-            <table class="vars" id="v140333056445960">
+            <table class="vars" id="v140168987398856">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -265,17 +262,17 @@
                 
                   <tr>
                     <td>exc</td>
-                    <td class="code"><pre>DoesNotExist(&#39;CountDecrement matching query does not exist.&#39;,)</pre></td>
+                    <td class="code"><pre>ValueError(&#39;not enough values to unpack (expected 2, got 1)&#39;,)</pre></td>
                   </tr>
                 
                   <tr>
                     <td>get_response</td>
-                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fa1de2a46d8&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7f7ba4660b00&gt;&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>request</td>
-                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practicereverse/1/&#39;&gt;</pre></td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -288,43 +285,43 @@
           <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/core/handlers/base.py</code> in <code>_get_response</code>
 
           
-            <div class="context" id="c140333056445896">
+            <div class="context" id="c140168987399432">
               
-                <ol start="180" class="pre-context" id="pre140333056445896">
+                <ol start="180" class="pre-context" id="pre140168987399432">
                 
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>                break</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>                break</pre></li>
                 
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>        if response is None:</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>        if response is None:</pre></li>
                 
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
                 
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>            try:</pre></li>
                 
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre></li>
                 
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>            except Exception as e:</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>            except Exception as e:</pre></li>
                 
                 </ol>
               
               <ol start="187" class="context-line">
-                <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>
+                <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>
                 response = self.process_exception_by_middleware(e, request)</pre> <span>...</span></li></ol>
               
-                <ol start='188' class="post-context" id="post140333056445896">
+                <ol start='188' class="post-context" id="post140168987399432">
                   
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>        # Complain if the view returned None (a common error).</pre></li>
                   
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>        if response is None:</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>        if response is None:</pre></li>
                   
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>            if isinstance(callback, types.FunctionType):    # FBV</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>            if isinstance(callback, types.FunctionType):    # FBV</pre></li>
                   
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>                view_name = callback.__name__</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>                view_name = callback.__name__</pre></li>
                   
-                  <li onclick="toggle('pre140333056445896', 'post140333056445896')"><pre>            else:                                           # CBV</pre></li>
+                  <li onclick="toggle('pre140168987399432', 'post140168987399432')"><pre>            else:                                           # CBV</pre></li>
                   
               </ol>
               
@@ -334,10 +331,10 @@
           
             <div class="commands">
                 
-                    <a href="#" onclick="return varToggle(this, '140333056445896')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '140168987399432')"><span>&#x25b6;</span> Local vars</a>
                 
             </div>
-            <table class="vars" id="v140333056445896">
+            <table class="vars" id="v140168987399432">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -348,7 +345,7 @@
                 
                   <tr>
                     <td>callback</td>
-                    <td class="code"><pre>&lt;function count_decrease at 0x7fa1d6ab1950&gt;</pre></td>
+                    <td class="code"><pre>&lt;function count_number at 0x7f7ba3eae950&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -363,12 +360,12 @@
                 
                   <tr>
                     <td>middleware_method</td>
-                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x7fa1d73a4780&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x7f7ba469a550&gt;&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>request</td>
-                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practicereverse/1/&#39;&gt;</pre></td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -378,7 +375,7 @@
                 
                   <tr>
                     <td>resolver_match</td>
-                    <td class="code"><pre>ResolverMatch(func=count.views.count_decrease, args=(), kwargs={&#39;count_id&#39;: &#39;1&#39;}, url_name=countreverse, app_names=[], namespaces=[])</pre></td>
+                    <td class="code"><pre>ResolverMatch(func=count.views.count_number, args=(), kwargs={&#39;count_id&#39;: &#39;1&#39;}, url_name=count, app_names=[], namespaces=[])</pre></td>
                   </tr>
                 
                   <tr>
@@ -388,12 +385,12 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fa1de2a46d8&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7f7ba4660b00&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>wrapped_callback</td>
-                    <td class="code"><pre>&lt;function count_decrease at 0x7fa1d6ab1950&gt;</pre></td>
+                    <td class="code"><pre>&lt;function count_number at 0x7f7ba3eae950&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -406,43 +403,43 @@
           <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/core/handlers/base.py</code> in <code>_get_response</code>
 
           
-            <div class="context" id="c140333056445832">
+            <div class="context" id="c140168987399240">
               
-                <ol start="178" class="pre-context" id="pre140333056445832">
+                <ol start="178" class="pre-context" id="pre140168987399240">
                 
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>            response = middleware_method(request, callback, callback_args, callback_kwargs)</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>            response = middleware_method(request, callback, callback_args, callback_kwargs)</pre></li>
                 
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>            if response:</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>            if response:</pre></li>
                 
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>                break</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>                break</pre></li>
                 
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>        if response is None:</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>        if response is None:</pre></li>
                 
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
                 
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>            try:</pre></li>
                 
                 </ol>
               
               <ol start="185" class="context-line">
-                <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>
+                <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>
                 response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre> <span>...</span></li></ol>
               
-                <ol start='186' class="post-context" id="post140333056445832">
+                <ol start='186' class="post-context" id="post140168987399240">
                   
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>            except Exception as e:</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>            except Exception as e:</pre></li>
                   
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
                   
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>        # Complain if the view returned None (a common error).</pre></li>
                   
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>        if response is None:</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>        if response is None:</pre></li>
                   
-                  <li onclick="toggle('pre140333056445832', 'post140333056445832')"><pre>            if isinstance(callback, types.FunctionType):    # FBV</pre></li>
+                  <li onclick="toggle('pre140168987399240', 'post140168987399240')"><pre>            if isinstance(callback, types.FunctionType):    # FBV</pre></li>
                   
               </ol>
               
@@ -452,10 +449,10 @@
           
             <div class="commands">
                 
-                    <a href="#" onclick="return varToggle(this, '140333056445832')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '140168987399240')"><span>&#x25b6;</span> Local vars</a>
                 
             </div>
-            <table class="vars" id="v140333056445832">
+            <table class="vars" id="v140168987399240">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -466,7 +463,7 @@
                 
                   <tr>
                     <td>callback</td>
-                    <td class="code"><pre>&lt;function count_decrease at 0x7fa1d6ab1950&gt;</pre></td>
+                    <td class="code"><pre>&lt;function count_number at 0x7f7ba3eae950&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -481,12 +478,12 @@
                 
                   <tr>
                     <td>middleware_method</td>
-                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x7fa1d73a4780&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x7f7ba469a550&gt;&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>request</td>
-                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practicereverse/1/&#39;&gt;</pre></td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -496,7 +493,7 @@
                 
                   <tr>
                     <td>resolver_match</td>
-                    <td class="code"><pre>ResolverMatch(func=count.views.count_decrease, args=(), kwargs={&#39;count_id&#39;: &#39;1&#39;}, url_name=countreverse, app_names=[], namespaces=[])</pre></td>
+                    <td class="code"><pre>ResolverMatch(func=count.views.count_number, args=(), kwargs={&#39;count_id&#39;: &#39;1&#39;}, url_name=count, app_names=[], namespaces=[])</pre></td>
                   </tr>
                 
                   <tr>
@@ -506,12 +503,12 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fa1de2a46d8&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7f7ba4660b00&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>wrapped_callback</td>
-                    <td class="code"><pre>&lt;function count_decrease at 0x7fa1d6ab1950&gt;</pre></td>
+                    <td class="code"><pre>&lt;function count_number at 0x7f7ba3eae950&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -524,35 +521,35 @@
           <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/views/decorators/csrf.py</code> in <code>wrapped_view</code>
 
           
-            <div class="context" id="c140333056445768">
+            <div class="context" id="c140168987399560">
               
-                <ol start="51" class="pre-context" id="pre140333056445768">
+                <ol start="51" class="pre-context" id="pre140168987399560">
                 
-                  <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>    &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>    &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>    Marks a view function as being exempt from the CSRF view protection.</pre></li>
+                  <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>    Marks a view function as being exempt from the CSRF view protection.</pre></li>
                 
-                  <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>    &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>    &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>    # We could just do view_func.csrf_exempt = True, but decorators</pre></li>
+                  <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>    # We could just do view_func.csrf_exempt = True, but decorators</pre></li>
                 
-                  <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>    # are nicer if they don&#39;t have side-effects, so we return a new</pre></li>
+                  <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>    # are nicer if they don&#39;t have side-effects, so we return a new</pre></li>
                 
-                  <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>    # function.</pre></li>
+                  <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>    # function.</pre></li>
                 
-                  <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>    def wrapped_view(*args, **kwargs):</pre></li>
+                  <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>    def wrapped_view(*args, **kwargs):</pre></li>
                 
                 </ol>
               
               <ol start="58" class="context-line">
-                <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>
+                <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>
         return view_func(*args, **kwargs)</pre> <span>...</span></li></ol>
               
-                <ol start='59' class="post-context" id="post140333056445768">
+                <ol start='59' class="post-context" id="post140168987399560">
                   
-                  <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>    wrapped_view.csrf_exempt = True</pre></li>
+                  <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>    wrapped_view.csrf_exempt = True</pre></li>
                   
-                  <li onclick="toggle('pre140333056445768', 'post140333056445768')"><pre>    return wraps(view_func, assigned=available_attrs(view_func))(wrapped_view)</pre></li>
+                  <li onclick="toggle('pre140168987399560', 'post140168987399560')"><pre>    return wraps(view_func, assigned=available_attrs(view_func))(wrapped_view)</pre></li>
                   
               </ol>
               
@@ -562,10 +559,10 @@
           
             <div class="commands">
                 
-                    <a href="#" onclick="return varToggle(this, '140333056445768')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '140168987399560')"><span>&#x25b6;</span> Local vars</a>
                 
             </div>
-            <table class="vars" id="v140333056445768">
+            <table class="vars" id="v140168987399560">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -576,7 +573,7 @@
                 
                   <tr>
                     <td>args</td>
-                    <td class="code"><pre>(&lt;WSGIRequest: GET &#39;/practicereverse/1/&#39;&gt;,)</pre></td>
+                    <td class="code"><pre>(&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;,)</pre></td>
                   </tr>
                 
                   <tr>
@@ -586,7 +583,7 @@
                 
                   <tr>
                     <td>view_func</td>
-                    <td class="code"><pre>&lt;function count_decrease at 0x7fa1d6ab18c8&gt;</pre></td>
+                    <td class="code"><pre>&lt;function count_number at 0x7f7ba3eae8c8&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -596,46 +593,46 @@
       
         
         <li class="frame user">
-          <code>/home/ayush/Documents/My_Project/practice/count/views.py</code> in <code>count_decrease</code>
+          <code>/home/ayush/Documents/My_Project/practice/count/views.py</code> in <code>count_number</code>
 
           
-            <div class="context" id="c140333056445704">
+            <div class="context" id="c140168987398728">
               
-                <ol start="33" class="pre-context" id="pre140333056445704">
+                <ol start="8" class="pre-context" id="pre140168987398728">
                 
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>            content_type=&quot;application/json&quot;, content=json.dumps({&quot;count&quot;: counter_val})</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>        )</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>from .models import Count, DataStored</pre></li>
                 
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>@csrf_exempt</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>@csrf_exempt</pre></li>
                 
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>def count_decrease(request, count_id=None):</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>def count_number(request, count_id):</pre></li>
                 
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>    if request.method == &quot;GET&quot;:</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>    if request.method == &quot;GET&quot;:</pre></li>
                 
                 </ol>
               
-              <ol start="40" class="context-line">
-                <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>
-        count_object = CountDecrement.objects.latest(&quot;id&quot;)</pre> <span>...</span></li></ol>
+              <ol start="15" class="context-line">
+                <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>
+        count_obj = Count.objects.get(id=count_id)</pre> <span>...</span></li></ol>
               
-                <ol start='41' class="post-context" id="post140333056445704">
+                <ol start='16' class="post-context" id="post140168987398728">
                   
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>        return render(request, &quot;decrement_page.html&quot;, {&quot;count_object&quot;: count_object})</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>        return render(</pre></li>
                   
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>    elif request.method == &quot;POST&quot;:</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>            request,</pre></li>
                   
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>        try:</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>            &quot;increment_page.html&quot;,</pre></li>
                   
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>            count_object = CountDecrement.objects.get(id=int(count_id))</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>            {&quot;count_obj&quot;: count_obj}</pre></li>
                   
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre>        )</pre></li>
                   
-                  <li onclick="toggle('pre140333056445704', 'post140333056445704')"><pre>        except:</pre></li>
+                  <li onclick="toggle('pre140168987398728', 'post140168987398728')"><pre></pre></li>
                   
               </ol>
               
@@ -645,10 +642,10 @@
           
             <div class="commands">
                 
-                    <a href="#" onclick="return varToggle(this, '140333056445704')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '140168987398728')"><span>&#x25b6;</span> Local vars</a>
                 
             </div>
-            <table class="vars" id="v140333056445704">
+            <table class="vars" id="v140168987398728">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -664,7 +661,7 @@
                 
                   <tr>
                     <td>request</td>
-                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practicereverse/1/&#39;&gt;</pre></td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#39;/practice/1/?username=vikas&#39;&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -677,43 +674,43 @@
           <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/manager.py</code> in <code>manager_method</code>
 
           
-            <div class="context" id="c140333056445640">
+            <div class="context" id="c140168987398600">
               
-                <ol start="78" class="pre-context" id="pre140333056445640">
+                <ol start="78" class="pre-context" id="pre140168987398600">
                 
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>    def check(self, **kwargs):</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>    def check(self, **kwargs):</pre></li>
                 
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>        return []</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>        return []</pre></li>
                 
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>    @classmethod</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>    @classmethod</pre></li>
                 
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>    def _get_queryset_methods(cls, queryset_class):</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>    def _get_queryset_methods(cls, queryset_class):</pre></li>
                 
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>        def create_method(name, method):</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>        def create_method(name, method):</pre></li>
                 
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>            def manager_method(self, *args, **kwargs):</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>            def manager_method(self, *args, **kwargs):</pre></li>
                 
                 </ol>
               
               <ol start="85" class="context-line">
-                <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>
+                <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>
                 return getattr(self.get_queryset(), name)(*args, **kwargs)</pre> <span>...</span></li></ol>
               
-                <ol start='86' class="post-context" id="post140333056445640">
+                <ol start='86' class="post-context" id="post140168987398600">
                   
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>            manager_method.__name__ = method.__name__</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>            manager_method.__name__ = method.__name__</pre></li>
                   
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>            manager_method.__doc__ = method.__doc__</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>            manager_method.__doc__ = method.__doc__</pre></li>
                   
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>            return manager_method</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>            return manager_method</pre></li>
                   
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre></pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>        new_methods = {}</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>        new_methods = {}</pre></li>
                   
-                  <li onclick="toggle('pre140333056445640', 'post140333056445640')"><pre>        # Refs http://bugs.python.org/issue1785.</pre></li>
+                  <li onclick="toggle('pre140168987398600', 'post140168987398600')"><pre>        # Refs http://bugs.python.org/issue1785.</pre></li>
                   
               </ol>
               
@@ -723,10 +720,10 @@
           
             <div class="commands">
                 
-                    <a href="#" onclick="return varToggle(this, '140333056445640')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '140168987398600')"><span>&#x25b6;</span> Local vars</a>
                 
             </div>
-            <table class="vars" id="v140333056445640">
+            <table class="vars" id="v140168987398600">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -737,7 +734,7 @@
                 
                   <tr>
                     <td>args</td>
-                    <td class="code"><pre>(&#39;id&#39;,)</pre></td>
+                    <td class="code"><pre>(&#39;1&#39;,)</pre></td>
                   </tr>
                 
                   <tr>
@@ -747,183 +744,12 @@
                 
                   <tr>
                     <td>name</td>
-                    <td class="code"><pre>&#39;latest&#39;</pre></td>
+                    <td class="code"><pre>&#39;get&#39;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.db.models.manager.Manager object at 0x7fa1d6a99860&gt;</pre></td>
-                  </tr>
-                
-              </tbody>
-            </table>
-          
-        </li>
-      
-        
-        <li class="frame django">
-          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py</code> in <code>latest</code>
-
-          
-            <div class="context" id="c140333056445576">
-              
-                <ol start="551" class="pre-context" id="pre140333056445576">
-                
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>        obj.query.add_ordering(&#39;%s%s&#39; % (direction, order_by))</pre></li>
-                
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>        return obj.get()</pre></li>
-                
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre></pre></li>
-                
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>    def earliest(self, field_name=None):</pre></li>
-                
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>        return self._earliest_or_latest(field_name=field_name, direction=&quot;&quot;)</pre></li>
-                
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre></pre></li>
-                
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>    def latest(self, field_name=None):</pre></li>
-                
-                </ol>
-              
-              <ol start="558" class="context-line">
-                <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>
-        return self._earliest_or_latest(field_name=field_name, direction=&quot;-&quot;)</pre> <span>...</span></li></ol>
-              
-                <ol start='559' class="post-context" id="post140333056445576">
-                  
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre></pre></li>
-                  
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>    def first(self):</pre></li>
-                  
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>        &quot;&quot;&quot;</pre></li>
-                  
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>        Returns the first object of a query, returns None if no match is found.</pre></li>
-                  
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>        &quot;&quot;&quot;</pre></li>
-                  
-                  <li onclick="toggle('pre140333056445576', 'post140333056445576')"><pre>        objects = list((self if self.ordered else self.order_by(&#39;pk&#39;))[:1])</pre></li>
-                  
-              </ol>
-              
-            </div>
-          
-
-          
-            <div class="commands">
-                
-                    <a href="#" onclick="return varToggle(this, '140333056445576')"><span>&#x25b6;</span> Local vars</a>
-                
-            </div>
-            <table class="vars" id="v140333056445576">
-              <thead>
-                <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                
-                  <tr>
-                    <td>field_name</td>
-                    <td class="code"><pre>&#39;id&#39;</pre></td>
-                  </tr>
-                
-                  <tr>
-                    <td>self</td>
-                    <td class="code"><pre>&lt;QuerySet []&gt;</pre></td>
-                  </tr>
-                
-              </tbody>
-            </table>
-          
-        </li>
-      
-        
-        <li class="frame django">
-          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py</code> in <code>_earliest_or_latest</code>
-
-          
-            <div class="context" id="c140333056445448">
-              
-                <ol start="545" class="pre-context" id="pre140333056445448">
-                
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>            &quot;field_name parameter or &#39;get_latest_by&#39; in the model&quot;</pre></li>
-                
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>        assert self.query.can_filter(), \</pre></li>
-                
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>            &quot;Cannot change a query once a slice has been taken.&quot;</pre></li>
-                
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>        obj = self._clone()</pre></li>
-                
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>        obj.query.set_limits(high=1)</pre></li>
-                
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>        obj.query.clear_ordering(force_empty=True)</pre></li>
-                
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>        obj.query.add_ordering(&#39;%s%s&#39; % (direction, order_by))</pre></li>
-                
-                </ol>
-              
-              <ol start="552" class="context-line">
-                <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>
-        return obj.get()</pre> <span>...</span></li></ol>
-              
-                <ol start='553' class="post-context" id="post140333056445448">
-                  
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre></pre></li>
-                  
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>    def earliest(self, field_name=None):</pre></li>
-                  
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>        return self._earliest_or_latest(field_name=field_name, direction=&quot;&quot;)</pre></li>
-                  
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre></pre></li>
-                  
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>    def latest(self, field_name=None):</pre></li>
-                  
-                  <li onclick="toggle('pre140333056445448', 'post140333056445448')"><pre>        return self._earliest_or_latest(field_name=field_name, direction=&quot;-&quot;)</pre></li>
-                  
-              </ol>
-              
-            </div>
-          
-
-          
-            <div class="commands">
-                
-                    <a href="#" onclick="return varToggle(this, '140333056445448')"><span>&#x25b6;</span> Local vars</a>
-                
-            </div>
-            <table class="vars" id="v140333056445448">
-              <thead>
-                <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                
-                  <tr>
-                    <td>direction</td>
-                    <td class="code"><pre>&#39;-&#39;</pre></td>
-                  </tr>
-                
-                  <tr>
-                    <td>field_name</td>
-                    <td class="code"><pre>&#39;id&#39;</pre></td>
-                  </tr>
-                
-                  <tr>
-                    <td>obj</td>
-                    <td class="code"><pre>&lt;QuerySet []&gt;</pre></td>
-                  </tr>
-                
-                  <tr>
-                    <td>order_by</td>
-                    <td class="code"><pre>&#39;id&#39;</pre></td>
-                  </tr>
-                
-                  <tr>
-                    <td>self</td>
-                    <td class="code"><pre>&lt;QuerySet []&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.db.models.manager.Manager object at 0x7f7ba3ea7a90&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -936,43 +762,43 @@
           <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py</code> in <code>get</code>
 
           
-            <div class="context" id="c140333056444872">
+            <div class="context" id="c140168996260296">
               
-                <ol start="373" class="pre-context" id="pre140333056444872">
+                <ol start="364" class="pre-context" id="pre140168996260296">
                 
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>            clone = clone.order_by()</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>        return self.query.get_count(using=self.db)</pre></li>
                 
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>        num = len(clone)</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>        if num == 1:</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>    def get(self, *args, **kwargs):</pre></li>
                 
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>            return clone._result_cache[0]</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>        &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>        if not num:</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>        Performs the query and returns a single object matching the given</pre></li>
                 
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>            raise self.model.DoesNotExist(</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>        keyword arguments.</pre></li>
                 
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>                &quot;%s matching query does not exist.&quot; %</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>        &quot;&quot;&quot;</pre></li>
                 
                 </ol>
               
-              <ol start="380" class="context-line">
-                <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>
-                self.model._meta.object_name</pre> <span>...</span></li></ol>
+              <ol start="371" class="context-line">
+                <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>
+        clone = self.filter(*args, **kwargs)</pre> <span>...</span></li></ol>
               
-                <ol start='381' class="post-context" id="post140333056444872">
+                <ol start='372' class="post-context" id="post140168996260296">
                   
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>            )</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>        if self.query.can_filter() and not self.query.distinct_fields:</pre></li>
                   
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>        raise self.model.MultipleObjectsReturned(</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>            clone = clone.order_by()</pre></li>
                   
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>            &quot;get() returned more than one %s -- it returned %s!&quot; %</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>        num = len(clone)</pre></li>
                   
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>            (self.model._meta.object_name, num)</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>        if num == 1:</pre></li>
                   
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre>        )</pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>            return clone._result_cache[0]</pre></li>
                   
-                  <li onclick="toggle('pre140333056444872', 'post140333056444872')"><pre></pre></li>
+                  <li onclick="toggle('pre140168996260296', 'post140168996260296')"><pre>        if not num:</pre></li>
                   
               </ol>
               
@@ -982,10 +808,10 @@
           
             <div class="commands">
                 
-                    <a href="#" onclick="return varToggle(this, '140333056444872')"><span>&#x25b6;</span> Local vars</a>
+                    <a href="#" onclick="return varToggle(this, '140168996260296')"><span>&#x25b6;</span> Local vars</a>
                 
             </div>
-            <table class="vars" id="v140333056444872">
+            <table class="vars" id="v140168996260296">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -996,12 +822,7 @@
                 
                   <tr>
                     <td>args</td>
-                    <td class="code"><pre>()</pre></td>
-                  </tr>
-                
-                  <tr>
-                    <td>clone</td>
-                    <td class="code"><pre>&lt;QuerySet []&gt;</pre></td>
+                    <td class="code"><pre>(&#39;1&#39;,)</pre></td>
                   </tr>
                 
                   <tr>
@@ -1010,13 +831,498 @@
                   </tr>
                 
                   <tr>
-                    <td>num</td>
-                    <td class="code"><pre>0</pre></td>
+                    <td>self</td>
+                    <td class="code"><pre>Error in formatting: TypeError: __str__ returned non-string (type int)</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py</code> in <code>filter</code>
+
+          
+            <div class="context" id="c140168996259656">
+              
+                <ol start="777" class="pre-context" id="pre140168996259656">
+                
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>        return self._clone()</pre></li>
+                
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>    def filter(self, *args, **kwargs):</pre></li>
+                
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>        &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>        Returns a new QuerySet instance with the args ANDed to the existing</pre></li>
+                
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>        set.</pre></li>
+                
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>        &quot;&quot;&quot;</pre></li>
+                
+                </ol>
+              
+              <ol start="784" class="context-line">
+                <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>
+        return self._filter_or_exclude(False, *args, **kwargs)</pre> <span>...</span></li></ol>
+              
+                <ol start='785' class="post-context" id="post140168996259656">
+                  
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>    def exclude(self, *args, **kwargs):</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>        &quot;&quot;&quot;</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>        Returns a new QuerySet instance with NOT (args) ANDed to the existing</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>        set.</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259656', 'post140168996259656')"><pre>        &quot;&quot;&quot;</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140168996259656')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140168996259656">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>(&#39;1&#39;,)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
                   </tr>
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;QuerySet []&gt;</pre></td>
+                    <td class="code"><pre>Error in formatting: TypeError: __str__ returned non-string (type int)</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py</code> in <code>_filter_or_exclude</code>
+
+          
+            <div class="context" id="c140168996260104">
+              
+                <ol start="795" class="pre-context" id="pre140168996260104">
+                
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>            assert self.query.can_filter(), \</pre></li>
+                
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>                &quot;Cannot filter a query once a slice has been taken.&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>        clone = self._clone()</pre></li>
+                
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>        if negate:</pre></li>
+                
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>            clone.query.add_q(~Q(*args, **kwargs))</pre></li>
+                
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>        else:</pre></li>
+                
+                </ol>
+              
+              <ol start="802" class="context-line">
+                <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>
+            clone.query.add_q(Q(*args, **kwargs))</pre> <span>...</span></li></ol>
+              
+                <ol start='803' class="post-context" id="post140168996260104">
+                  
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>        return clone</pre></li>
+                  
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>    def complex_filter(self, filter_obj):</pre></li>
+                  
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>        &quot;&quot;&quot;</pre></li>
+                  
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre>        Returns a new QuerySet instance with filter_obj added to the filters.</pre></li>
+                  
+                  <li onclick="toggle('pre140168996260104', 'post140168996260104')"><pre></pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140168996260104')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140168996260104">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>(&#39;1&#39;,)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>clone</td>
+                    <td class="code"><pre>Error in formatting: TypeError: __str__ returned non-string (type int)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>negate</td>
+                    <td class="code"><pre>False</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>Error in formatting: TypeError: __str__ returned non-string (type int)</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/sql/query.py</code> in <code>add_q</code>
+
+          
+            <div class="context" id="c140168996259592">
+              
+                <ol start="1254" class="pre-context" id="pre140168996259592">
+                
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>        # and existing conditions. So, any existing inner join forces the join</pre></li>
+                
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>        # type to remain inner. Existing outer joins can however be demoted.</pre></li>
+                
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>        # (Consider case where rel_a is LOUTER and rel_a__col=1 is added - if</pre></li>
+                
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>        # rel_a doesn&#39;t produce any rows, then the whole condition must fail.</pre></li>
+                
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>        # So, demotion is OK.</pre></li>
+                
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>        existing_inner = set(</pre></li>
+                
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>            (a for a in self.alias_map if self.alias_map[a].join_type == INNER))</pre></li>
+                
+                </ol>
+              
+              <ol start="1261" class="context-line">
+                <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>
+        clause, _ = self._add_q(q_object, self.used_aliases)</pre> <span>...</span></li></ol>
+              
+                <ol start='1262' class="post-context" id="post140168996259592">
+                  
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>        if clause:</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>            self.where.add(clause, AND)</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>        self.demote_joins(existing_inner)</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>    def _add_q(self, q_object, used_aliases, branch_negated=False,</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259592', 'post140168996259592')"><pre>               current_negated=False, allow_joins=True, split_subq=True):</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140168996259592')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140168996259592">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>existing_inner</td>
+                    <td class="code"><pre>set()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>q_object</td>
+                    <td class="code"><pre>&lt;Q: (AND: 1)&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.db.models.sql.query.Query object at 0x7f7ba33b5d68&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/sql/query.py</code> in <code>_add_q</code>
+
+          
+            <div class="context" id="c140168996260232">
+              
+                <ol start="1280" class="pre-context" id="pre140168996260232">
+                
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>                    child, used_aliases, branch_negated,</pre></li>
+                
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>                    current_negated, allow_joins, split_subq)</pre></li>
+                
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>                joinpromoter.add_votes(needed_inner)</pre></li>
+                
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>            else:</pre></li>
+                
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>                child_clause, needed_inner = self.build_filter(</pre></li>
+                
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>                    child, can_reuse=used_aliases, branch_negated=branch_negated,</pre></li>
+                
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>                    current_negated=current_negated, connector=connector,</pre></li>
+                
+                </ol>
+              
+              <ol start="1287" class="context-line">
+                <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>
+                    allow_joins=allow_joins, split_subq=split_subq,</pre> <span>...</span></li></ol>
+              
+                <ol start='1288' class="post-context" id="post140168996260232">
+                  
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>                )</pre></li>
+                  
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>                joinpromoter.add_votes(needed_inner)</pre></li>
+                  
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>            if child_clause:</pre></li>
+                  
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>                target_clause.add(child_clause, connector)</pre></li>
+                  
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>        needed_inner = joinpromoter.update_join_types(self)</pre></li>
+                  
+                  <li onclick="toggle('pre140168996260232', 'post140168996260232')"><pre>        return target_clause, needed_inner</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140168996260232')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140168996260232">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>allow_joins</td>
+                    <td class="code"><pre>True</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>branch_negated</td>
+                    <td class="code"><pre>False</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>child</td>
+                    <td class="code"><pre>&#39;1&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>connector</td>
+                    <td class="code"><pre>&#39;AND&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>current_negated</td>
+                    <td class="code"><pre>False</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>joinpromoter</td>
+                    <td class="code"><pre>&lt;django.db.models.sql.query.JoinPromoter object at 0x7f7ba33b5e48&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>q_object</td>
+                    <td class="code"><pre>&lt;Q: (AND: 1)&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.db.models.sql.query.Query object at 0x7f7ba33b5d68&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>split_subq</td>
+                    <td class="code"><pre>True</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>target_clause</td>
+                    <td class="code"><pre>&lt;WhereNode: (AND: )&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>used_aliases</td>
+                    <td class="code"><pre>set()</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code>/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/sql/query.py</code> in <code>build_filter</code>
+
+          
+            <div class="context" id="c140168996259464">
+              
+                <ol start="1155" class="pre-context" id="pre140168996259464">
+                
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>        The method will create a filter clause that can be added to the current</pre></li>
+                
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>        query. However, if the filter isn&#39;t added to the query then the caller</pre></li>
+                
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>        is responsible for unreffing the joins used.</pre></li>
+                
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>        &quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>        if isinstance(filter_expr, dict):</pre></li>
+                
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>            raise FieldError(&quot;Cannot parse keyword query as dict&quot;)</pre></li>
+                
+                </ol>
+              
+              <ol start="1162" class="context-line">
+                <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>
+        arg, value = filter_expr</pre> <span>...</span></li></ol>
+              
+                <ol start='1163' class="post-context" id="post140168996259464">
+                  
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>        if not arg:</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>            raise FieldError(&quot;Cannot parse keyword query %r&quot; % arg)</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>        lookups, parts, reffed_expression = self.solve_lookup_type(arg)</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>        if not allow_joins and len(parts) &gt; 1:</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre>            raise FieldError(&quot;Joined field references are not permitted in this query&quot;)</pre></li>
+                  
+                  <li onclick="toggle('pre140168996259464', 'post140168996259464')"><pre></pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '140168996259464')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v140168996259464">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>allow_joins</td>
+                    <td class="code"><pre>True</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>branch_negated</td>
+                    <td class="code"><pre>False</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>can_reuse</td>
+                    <td class="code"><pre>set()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>connector</td>
+                    <td class="code"><pre>&#39;AND&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>current_negated</td>
+                    <td class="code"><pre>False</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>filter_expr</td>
+                    <td class="code"><pre>&#39;1&#39;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.db.models.sql.query.Query object at 0x7f7ba33b5d68&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>split_subq</td>
+                    <td class="code"><pre>True</pre></td>
                   </tr>
                 
               </tbody>
@@ -1032,7 +1338,7 @@
   <div id="pastebinTraceback" class="pastebin">
     <input type="hidden" name="language" value="PythonConsole">
     <input type="hidden" name="title"
-      value="DoesNotExist at /practicereverse/1/">
+      value="ValueError at /practice/1/">
     <input type="hidden" name="source" value="Django Dpaste Agent">
     <input type="hidden" name="poster" value="Django">
     <textarea name="content" id="traceback_area" cols="140" rows="25">
@@ -1040,7 +1346,7 @@ Environment:
 
 
 Request Method: GET
-Request URL: http://localhost:8000/practicereverse/1/
+Request URL: http://localhost:8000/practice/1/?username=vikas
 
 Django Version: 1.11.2
 Python Version: 3.5.2
@@ -1077,23 +1383,32 @@ File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/d
 File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/views/decorators/csrf.py" in wrapped_view
   58.         return view_func(*args, **kwargs)
 
-File "/home/ayush/Documents/My_Project/practice/count/views.py" in count_decrease
-  40.         count_object = CountDecrement.objects.latest(&quot;id&quot;)
+File "/home/ayush/Documents/My_Project/practice/count/views.py" in count_number
+  15.         count_obj = Count.objects.get(id=count_id)
 
 File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/manager.py" in manager_method
   85.                 return getattr(self.get_queryset(), name)(*args, **kwargs)
 
-File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py" in latest
-  558.         return self._earliest_or_latest(field_name=field_name, direction=&quot;-&quot;)
-
-File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py" in _earliest_or_latest
-  552.         return obj.get()
-
 File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py" in get
-  380.                 self.model._meta.object_name
+  371.         clone = self.filter(*args, **kwargs)
 
-Exception Type: DoesNotExist at /practicereverse/1/
-Exception Value: CountDecrement matching query does not exist.
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py" in filter
+  784.         return self._filter_or_exclude(False, *args, **kwargs)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/query.py" in _filter_or_exclude
+  802.             clone.query.add_q(Q(*args, **kwargs))
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/sql/query.py" in add_q
+  1261.         clause, _ = self._add_q(q_object, self.used_aliases)
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/sql/query.py" in _add_q
+  1287.                     allow_joins=allow_joins, split_subq=split_subq,
+
+File "/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages/django/db/models/sql/query.py" in build_filter
+  1162.         arg, value = filter_expr
+
+Exception Type: ValueError at /practice/1/
+Exception Value: not enough values to unpack (expected 2, got 1)
 </textarea>
   <br><br>
   <input type="submit" value="Share this traceback on a public website">
@@ -1114,7 +1429,22 @@ Exception Value: CountDecrement matching query does not exist.
 
   <h3 id="get-info">GET</h3>
   
-    <p>No GET data</p>
+    <table class="req">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+            <td>username</td>
+            <td class="code"><pre>&#39;vikas&#39;</pre></td>
+          </tr>
+        
+      </tbody>
+    </table>
   
 
   <h3 id="post-info">POST</h3>
@@ -1169,7 +1499,7 @@ Exception Value: CountDecrement matching query does not exist.
       
         <tr>
           <td>DBUS_SESSION_BUS_ADDRESS</td>
-          <td class="code"><pre>&#39;unix:abstract=/tmp/dbus-GgbYUvGHas&#39;</pre></td>
+          <td class="code"><pre>&#39;unix:abstract=/tmp/dbus-GkoLHhDwQI&#39;</pre></td>
         </tr>
       
         <tr>
@@ -1214,7 +1544,7 @@ Exception Value: CountDecrement matching query does not exist.
       
         <tr>
           <td>GIO_LAUNCHED_DESKTOP_FILE_PID</td>
-          <td class="code"><pre>&#39;4144&#39;</pre></td>
+          <td class="code"><pre>&#39;7752&#39;</pre></td>
         </tr>
       
         <tr>
@@ -1288,11 +1618,6 @@ Exception Value: CountDecrement matching query does not exist.
         </tr>
       
         <tr>
-          <td>IDE_PROJECT_ROOTS</td>
-          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/practice&#39;</pre></td>
-        </tr>
-      
-        <tr>
           <td>IM_CONFIG_PHASE</td>
           <td class="code"><pre>&#39;1&#39;</pre></td>
         </tr>
@@ -1300,11 +1625,6 @@ Exception Value: CountDecrement matching query does not exist.
         <tr>
           <td>INSTANCE</td>
           <td class="code"><pre>&#39;&#39;</pre></td>
-        </tr>
-      
-        <tr>
-          <td>IPYTHONENABLE</td>
-          <td class="code"><pre>&#39;True&#39;</pre></td>
         </tr>
       
         <tr>
@@ -1323,11 +1643,6 @@ Exception Value: CountDecrement matching query does not exist.
         </tr>
       
         <tr>
-          <td>LIBRARY_ROOTS</td>
-          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/project_env/lib/python3.5:/home/ayush/Documents/My_Project/project_env/lib/python3.5/plat-x86_64-linux-gnu:/home/ayush/Documents/My_Project/project_env/lib/python3.5/lib-dynload:/usr/lib/python3.5:/usr/lib/python3.5/plat-x86_64-linux-gnu:/home/ayush/Documents/My_Project/project_env/lib/python3.5/site-packages:/home/ayush/.PyCharm2017.3/system/python_stubs/-2091879014:/home/ayush/Downloads/pycharm-2017.3.2/helpers/python-skeletons:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/3.5:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/3.4:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/3.3:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/3:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/stdlib/2and3:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/third_party/3:/home/ayush/Downloads/pycharm-2017.3.2/helpers/typeshed/third_party/2and3&#39;</pre></td>
-        </tr>
-      
-        <tr>
           <td>LOGNAME</td>
           <td class="code"><pre>&#39;ayush&#39;</pre></td>
         </tr>
@@ -1339,17 +1654,12 @@ Exception Value: CountDecrement matching query does not exist.
       
         <tr>
           <td>PATH</td>
-          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/project_env/bin:/home/ayush/bin:/home/ayush/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin&#39;</pre></td>
+          <td class="code"><pre>&#39;/home/ayush/bin:/home/ayush/.local/bin:/home/ayush/bin:/home/ayush/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin&#39;</pre></td>
         </tr>
       
         <tr>
           <td>PATH_INFO</td>
-          <td class="code"><pre>&#39;/practicereverse/1/&#39;</pre></td>
-        </tr>
-      
-        <tr>
-          <td>PS1</td>
-          <td class="code"><pre>&#39;(project_env) &#39;</pre></td>
+          <td class="code"><pre>&#39;/practice/1/&#39;</pre></td>
         </tr>
       
         <tr>
@@ -1358,18 +1668,8 @@ Exception Value: CountDecrement matching query does not exist.
         </tr>
       
         <tr>
-          <td>PYCHARM_HOSTED</td>
-          <td class="code"><pre>&#39;1&#39;</pre></td>
-        </tr>
-      
-        <tr>
-          <td>PYCHARM_MATPLOTLIB_PORT</td>
-          <td class="code"><pre>&#39;45791&#39;</pre></td>
-        </tr>
-      
-        <tr>
-          <td>PYDEVD_LOAD_VALUES_ASYNC</td>
-          <td class="code"><pre>&#39;True&#39;</pre></td>
+          <td>PYCHARM_DJANGO_MANAGE_MODULE</td>
+          <td class="code"><pre>&#39;manage&#39;</pre></td>
         </tr>
       
         <tr>
@@ -1384,7 +1684,7 @@ Exception Value: CountDecrement matching query does not exist.
       
         <tr>
           <td>PYTHONPATH</td>
-          <td class="code"><pre>&#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pycharm_matplotlib_backend:/home/ayush/Documents/My_Project/practice:/home/ayush/Downloads/pycharm-2017.3.2/helpers/pydev:/home/ayush/.PyCharm2017.3/system/cythonExtensions&#39;</pre></td>
+          <td class="code"><pre>&#39;/home/ayush/Downloads/pycharm-2017.3.2/helpers/pycharm:/home/ayush/Documents/My_Project/practice:/home/ayush/Documents/My_Project/practice&#39;</pre></td>
         </tr>
       
         <tr>
@@ -1419,7 +1719,7 @@ Exception Value: CountDecrement matching query does not exist.
       
         <tr>
           <td>QUERY_STRING</td>
-          <td class="code"><pre>&#39;&#39;</pre></td>
+          <td class="code"><pre>&#39;username=vikas&#39;</pre></td>
         </tr>
       
         <tr>
@@ -1478,13 +1778,18 @@ Exception Value: CountDecrement matching query does not exist.
         </tr>
       
         <tr>
+          <td>SESSION_MANAGER</td>
+          <td class="code"><pre>&#39;local/ayush-desktop:@/tmp/.ICE-unix/6940,unix/ayush-desktop:/tmp/.ICE-unix/6940&#39;</pre></td>
+        </tr>
+      
+        <tr>
           <td>SHELL</td>
           <td class="code"><pre>&#39;/bin/bash&#39;</pre></td>
         </tr>
       
         <tr>
           <td>SHLVL</td>
-          <td class="code"><pre>&#39;0&#39;</pre></td>
+          <td class="code"><pre>&#39;1&#39;</pre></td>
         </tr>
       
         <tr>
@@ -1514,17 +1819,12 @@ Exception Value: CountDecrement matching query does not exist.
       
         <tr>
           <td>UPSTART_SESSION</td>
-          <td class="code"><pre>&#39;unix:abstract=/com/ubuntu/upstart-session/1000/1559&#39;</pre></td>
+          <td class="code"><pre>&#39;unix:abstract=/com/ubuntu/upstart-session/1000/6693&#39;</pre></td>
         </tr>
       
         <tr>
           <td>USER</td>
           <td class="code"><pre>&#39;ayush&#39;</pre></td>
-        </tr>
-      
-        <tr>
-          <td>VIRTUAL_ENV</td>
-          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/project_env&#39;</pre></td>
         </tr>
       
         <tr>
@@ -1603,6 +1903,11 @@ Exception Value: CountDecrement matching query does not exist.
         </tr>
       
         <tr>
+          <td>_</td>
+          <td class="code"><pre>&#39;/home/ayush/Documents/My_Project/project_env/bin/python3.5&#39;</pre></td>
+        </tr>
+      
+        <tr>
           <td>wsgi.errors</td>
           <td class="code"><pre>&lt;_io.TextIOWrapper name=&#39;&lt;stderr&gt;&#39; mode=&#39;w&#39; encoding=&#39;UTF-8&#39;&gt;</pre></td>
         </tr>
@@ -1614,7 +1919,7 @@ Exception Value: CountDecrement matching query does not exist.
       
         <tr>
           <td>wsgi.input</td>
-          <td class="code"><pre>&lt;_io.BufferedReader name=6&gt;</pre></td>
+          <td class="code"><pre>&lt;_io.BufferedReader name=4&gt;</pre></td>
         </tr>
       
         <tr>

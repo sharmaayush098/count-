@@ -4,29 +4,65 @@
     <meta charset="UTF-8">
     <title>Increment</title>
     <script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
 
 </head>
 <body bgcolor="#ffe4c4">
 <div align="center">
     <h1><label for="number" class="sr-only"> Counter</label></h1>
     <div id="result" style="font-size: x-large">
-         {{ count_obj.increment }}
+        {{ count_obj.increment }}
+
     </div>
     <div class="add-row">
-    <button type="button" id="increment">Press to increase</button>
+        <button type="button" id="increment">Press to increase</button>
 
-    <button type="button" id="decrement"> Press to decrease</button>
+        <button type="button" id="decrement"> Press to decrease</button>
     </div>
-        <div>
+    <div>
 
         Access Details:
-    <ol>
+        {% if count_obj %}
+            <ol>
+            <li>
+                {% for count  in records %}
+                    {{ count.username }} {{ count.action_type }}{{ count.time }}
+
+                {% endfor %}
+            </li>
+
+        {% endif %}
 
 
-    </ol>
+
+        </ol>
+        <button type="button" id="greater_values">Count > 10</button>
+        <button type="button" id="lesser_values">Count < 10</button>
+        <button type="button" id="only-incremented">Only Incremented</button>
+        <button type="button" id="only-decremented">Only Decremented</button>
+    </div>
+    <div id="grt">
+        <p>
+            greater numbers:
+
+        </p>
+    </div>
+    <div id="lsr">
+        <p>
+            lesser number:
+        </p>
+    </div>
+    <div id ="incremented">
+        <p>
+        only incremented number:
+        </p>
+    </div>
+    <div id="decremented">
+        <p>
+            only decremented number:
+        </p>
     </div>
 </div>
 
@@ -40,6 +76,7 @@
     var countId = "{{ count_obj.id }}";
     var countID = "{{ count_obj.id }}";
     var userId = "{{ user.id }}";
+
 
     $("#increment").click(function (evt) {
         $.ajax({
@@ -64,18 +101,18 @@
         })
     });
     $("#decrement").click(function(){
-         $.ajax({
-             url:'/reverse/'+countID+'/',
-             method:'post',
-             success: function (response) {
-                 $("#result").html(response.count);
+        $.ajax({
+            url:'/reverse/'+countID+'/',
+            method:'post',
+            success: function (response) {
+                $("#result").html(response.count);
 
-             },
-             error:function (response) {
-                 alert("there was an error!!");
+            },
+            error:function (response) {
+                alert("there was an error!!");
 
-             }
-         })
+            }
+        })
     });
     $("#decrement").click(function () {
         $.ajax({
@@ -84,11 +121,83 @@
             success: function (response){
                 var result = response.user+" decremented at "+response.time+".<br>";
                 $('ol').append(result);
+            },
+            error:function (response) {
+                alert("there is some error")
+
             }
         })
 
+    });
+    $("#greater_values").click(function () {
+        $.ajax({
+            url: '/arrangement/',
+            method: 'post',
+            success: function (response) {
+                var result = response.greater["value"] + "<br>";
+                $('#grt').append(result);
+            },
+            error: function (response) {
+                alert("error")
+
+            }
+
+        });
+        $("#lesser_values").click(function () {
+            $.ajax(
+                {
+                    url:'/arrangement/',
+                    method:'post',
+                    success: function (response) {
+                        var result = response.lesser["value"] + "<br>";
+                        $('#lsr').append(result);
+
+
+                    },
+                    error: function (response) {
+                        alert("error")
+
+                    }
+                }
+            )
+        })
+
+    });
+    $("#only-incremented").click(function () {
+        $.ajax({
+                url:'/inc_sorting/',
+                method:'post',
+                success: function (response) {
+                    var res = response.result;
+                    $('#incremented').append(res);
+
+
+                },
+            error: function (response) {
+                    alert("error")
+
+            }
+            }
+        )
+
     })
+     $("#only-decremented").click(function () {
+        $.ajax({
+                url:'/dec_sorting/',
+                method:'post',
+                success: function (response) {
+                    var res = response.results;
+                    $('#decremented').append(res);
 
 
+                },
+            error: function (response) {
+                    alert("error")
+
+            }
+            }
+        )
+
+    })
 
 </script>
