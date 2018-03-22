@@ -134,8 +134,8 @@
             url: '/arrangement/',
             method: 'post',
             success: function (response) {
-                var result = response.greater["value"] + "<br>";
-                $('#grt').append(result);
+                var result = response.greater;
+                for(i=0;i<result.length;i++){$('#grt').append(result[i]["value"]+"<br>")}
             },
             error: function (response) {
                 alert("error")
@@ -149,8 +149,8 @@
                     url:'/arrangement/',
                     method:'post',
                     success: function (response) {
-                        var result = response.lesser["value"] + "<br>";
-                        $('#lsr').append(result);
+                        var result = response.lesser;
+                        for(i=0;i<result.length;i++){$('#lsr').append(result[i]["value"]+"<br>")}
 
 
                     },
@@ -169,7 +169,10 @@
                 method:'post',
                 success: function (response) {
                     var res = response.result;
-                    $('#incremented').append(res);
+                    for(i=0;i<res.length;i++){ $('#incremented').append(res[i]["countid"]+" id is "+res[i]["action_type"])};
+
+
+
 
 
                 },
@@ -187,7 +190,8 @@
                 method:'post',
                 success: function (response) {
                     var res = response.results;
-                    $('#decremented').append(res);
+                    for(i=0;i<res.length;i++){ $('#decremented').append(res[i]["countid"]+" "+res[i]["action_type"]);}
+
 
 
                 },
