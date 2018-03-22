@@ -7,7 +7,39 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
+    <style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+.button5 {background-color: #555555;} /* Black */
+
+   .text {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+}
+
+    #left_side {
+    float: left;}
+     #right_side {
+    float: right;
+
+        }
+</style>
 </head>
 <body bgcolor="#ffe4c4">
 <div align="center">
@@ -17,54 +49,47 @@
 
     </div>
     <div class="add-row">
-        <button type="button" id="increment">Press to increase</button>
-
-        <button type="button" id="decrement"> Press to decrease</button>
+        <button class="button" id ="increment">INCREASE</button>
+        <button class="button button3" id="decrement">DECREASE</button>
     </div>
-    <div>
 
-        Access Details:
+
+        <button class="button button2" id="greater_values">Number > 10</button>
+        <button class="button button2" id="lesser_values">Number < 10</button>
+        <button class="button button5" id="only-incremented">Only Incremented Numbers</button>
+        <button class="button button5" id="only-decremented">Only Decremented Number</button>
+        </div>
+
+        <div class="text" id="left_side">
+
+            <h3>Access Details:</h3>
         {% if count_obj %}
             <ol>
-            <li>
-                {% for count  in records %}
-                    {{ count.username }} {{ count.action_type }}{{ count.time }}
 
+                {% for count  in records %}
+                    <li>
+                    ''{{ count.username }} {{ count.action_type }}{{ count.time }}''
+                    </li>
                 {% endfor %}
-            </li>
+
 
         {% endif %}
 
 
 
         </ol>
-        <button type="button" id="greater_values">Count > 10</button>
-        <button type="button" id="lesser_values">Count < 10</button>
-        <button type="button" id="only-incremented">Only Incremented</button>
-        <button type="button" id="only-decremented">Only Decremented</button>
-    </div>
-    <div id="grt">
-        <p>
-            greater numbers:
-
-        </p>
-    </div>
-    <div id="lsr">
-        <p>
-            lesser number:
-        </p>
-    </div>
-    <div id ="incremented">
-        <p>
-        only incremented number:
-        </p>
-    </div>
-    <div id="decremented">
-        <p>
-            only decremented number:
-        </p>
-    </div>
-</div>
+        </div>
+        <div class="text" id="right_side">
+            <h3> Details:</h3>
+        <div id="grt">
+            <p>Greater numbers:</p></div>
+        <div id="lsr">
+        <p>Lesser number:</p></div>
+        <div id ="incremented">
+        <p>Only incremented number:</p></div>
+        <div id="decremented">
+            <p>Only decremented number:</p></div>
+        </div>
 
 
 
